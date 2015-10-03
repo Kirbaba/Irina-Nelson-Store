@@ -74,6 +74,18 @@ h2.number {
 .p0 {
   padding: 0; }
 
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+@media only screen and (max-width: 770px) {
+  .align-left {
+    text-align: center; }
+
+  .align-right {
+    text-align: center; } }
 .navbar-nav {
   width: 100%;
   text-align: center;
@@ -383,7 +395,7 @@ h2.number {
     .store .show-more:hover {
       background-color: #816945; }
 
-.reviews {
+.reviews, .social {
   display: block;
   float: left;
   width: 100%;
@@ -400,7 +412,7 @@ h2.number {
       display: block;
       text-align: right;
       color: #ECD796; }
-  .reviews .show-more {
+  .reviews .show-more, .social .show-more {
     font-size: 1.250em;
     text-align: center;
     width: 204px;
@@ -417,7 +429,7 @@ h2.number {
     text-decoration: none;
     color: #fff;
     margin: 25px auto; }
-    .reviews .show-more:hover {
+    .reviews .show-more:hover, .social .show-more:hover {
       background-color: #816945; }
 
 .subs {
@@ -472,5 +484,49 @@ h2.number {
       background-color: #953c22; }
   .subs__form {
     display: block; }
+
+.social p {
+  color: #FFF;
+  font-size: 0.813em;
+  line-height: 47px; }
+.social h5 {
+  text-align: center;
+  color: #FFF;
+  font-size: 1.188em;
+  margin: 15px 0; }
+.social__but {
+  display: block;
+  margin: 0 auto;
+  width: 425px; }
+  .social__but a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 36px;
+    height: 37px;
+    margin: 5px;
+    line-height: 37px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #999;
+    color: #3B2820;
+    text-align: center;
+    font-size: 20px; }
+    .social__but a:hover {
+      background-color: #737373; }
+    .social__but a .my-world {
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      background-image: url("../img/my-world-1.png"); }
+
+@media only screen and (max-width: 500px) {
+  .social__but {
+    width: 212px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -298,6 +298,40 @@
  			</div>
  		</div>
  	</section>
+
+ 	<section class="social">
+ 		<div class="container-fluid">
+ 			<div class="row">
+ 				<div class="container">
+ 					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+ 						<p class="align-left">RSpro design</p>
+ 					</div>
+ 					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 p0">
+ 						<div class="row">
+ 							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 p0">
+ 								<h5>Мы в соц сетях</h5>
+ 							</div>
+ 							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+ 								<div class="social__but">
+	 								<a href="#"><i class="fa fa-twitter"></i></a>
+	 								<a href="#"><i class="fa fa-vk"></i></a>								
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+									<a href="#"><i class="fa  fa-google-plus"></i></a>
+	 								<a href="#"><i class="my-world"></i></a>								
+									<a href="#"><i class="fa fa-odnoklassniki"></i></a>									
+									<a href="#"><i class="fa fa-youtube"></i></a>
+								</div>
+ 							</div>
+ 						</div>
+ 					</div>
+ 					<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p0">
+ 						<p class="align-right">Все права защищены. 2015</p>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</section>
     
 <?php wp_footer(); ?>
 </body>
