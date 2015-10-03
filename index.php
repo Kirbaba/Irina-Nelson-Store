@@ -332,6 +332,23 @@
  			</div>
  		</div>
  	</section>
+
+ 	<footer class="footer">
+ 		<div class="container-fluid">
+ 			<div class="row">
+ 				<div class="container">	
+					<ul class="nav navbar-nav navbar-center navigation__list">		      
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Статьи</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Подписка</a></li>  		       
+					</ul>
+					<h2 class="number">8 800 003 99 22</h2>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</footer>
     
 <?php wp_footer(); ?>
 </body>

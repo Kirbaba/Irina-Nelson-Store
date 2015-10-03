@@ -528,5 +528,21 @@ h2.number {
 @media only screen and (max-width: 500px) {
   .social__but {
     width: 212px; } }
+.footer {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-image: url("../img/main-bg.png");
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 0; }
+  .footer .nav > li > a:hover, .footer .nav > li > a:focus {
+    background: none;
+    color: #FFBF4F; }
+  .footer .navbar-nav li a {
+    color: #f0ce9a; }
 
 /*# sourceMappingURL=style.css.map */
