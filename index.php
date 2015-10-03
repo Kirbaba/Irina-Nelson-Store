@@ -203,7 +203,66 @@
 				</div>
 			</section>
 		</div>
+
 	</div>
+
+	</section>
+ <!-- Слайдер блога -->
+	<section class="blog">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+ <!-- Слайдер блога -->
+
+ 	<section class="reviews">
+ 		<div class="container-fluid">
+ 			<div class="row">
+ 				<div class="container">
+ 					<h1 class="block_title">Отзывы покупател</h1>
+ 					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+ 						<div class="reviews__item">
+ 							<p>«Иван чай посоветовал один знакомый доктор. Стал пить и почти в первые же дни почувствовал значительные улучшения. Давление и самочувствие нормализовались. Пропил месяц, гипертония прошла. Сейчас чувствую себя замечательно».</p>
+ 							<p class="author">Константин Владимирович, 53 года</p>
+ 						</div>
+ 						<div class="reviews__item">
+ 							<p>«Страдаю много лет диабетом 2-го типа. Сахар в крови постоянно менялся. При этом, естественно, соблюдала диеты, но все равно за сутки изменения от 3,2 до 13 считались обычным делом. Последствия таких частых и сильных колебаний, думаю, известны каждому диабетику. После того как стала пить Иван чай, сахар стал изменяться в пределах 5-6, т.е. в диапазоне нормальных значений. А вместе с этим пришло и хорошее самочувствие».</p>
+ 							<p class="author">Альбина, 53 года</p>
+ 						</div>
+ 						<div class="reviews__item">
+ 							<p>«Хорошо помогает при гепатите. Лечу гепатит С уже год таблетками. Месяц назад стал дополнительно заваривать сбор. Эффективность лечения увеличилась в разы, что отметил даже врач. Есть все надежды, что избавлюсь от этого вируса раз и навсегда. Очень на это надеюсь».</p>
+ 							<p class="author">Константин, 29 лет</p>
+ 						</div>
+ 						<a href="#" class="show-more">Показать еще статьи</a>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</section>
+
+ 	<section class="subs">
+ 		<div class="container-fluid">
+ 			<div class="row">
+ 				<h1 class="block_title">Подписка на новости</h1>
+ 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+ 					
+					<form action="">
+						<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							<input type="email" class="subs__input" placeholder="Ведите Ваш e-mail:">
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 p0">
+							<input type="submit" class="subs__sub" value="Подписаться">
+						</div>
+					</form>
+					
+				</div>
+ 			</div>
+ 		</div>
+ 	</section>
     
 <?php wp_footer(); ?>
 </body>

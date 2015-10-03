@@ -383,4 +383,94 @@ h2.number {
     .store .show-more:hover {
       background-color: #816945; }
 
+.reviews {
+  display: block;
+  float: left;
+  width: 100%;
+  background-color: #4A332A;
+  position: relative;
+  padding: 20px 0; }
+  .reviews__item {
+    display: block;
+    margin: 25px 0; }
+    .reviews__item p {
+      color: #fff;
+      font-size: 1.125em; }
+    .reviews__item .author {
+      display: block;
+      text-align: right;
+      color: #ECD796; }
+  .reviews .show-more {
+    font-size: 1.250em;
+    text-align: center;
+    width: 204px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    border-radius: 17px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #a28457;
+    text-decoration: none;
+    color: #fff;
+    margin: 25px auto; }
+    .reviews .show-more:hover {
+      background-color: #816945; }
+
+.subs {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-image: url("../img/main-bg.png");
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 0; }
+  .subs__input {
+    display: block;
+    margin: 20px auto;
+    float: left;
+    font-size: 1.813em;
+    text-align: center;
+    color: #EDD68E;
+    width: 100%;
+    height: 61px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    border-radius: 17px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 5px solid #cfbf8d;
+    background: transparent;
+    outline: none; }
+  .subs__sub {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    font-size: 1.563em;
+    font-family: "OfficinaSerifBold";
+    text-align: center;
+    color: #FFF;
+    line-height: 61px;
+    height: 61px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    border-radius: 17px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #bf4d2b;
+    outline: none;
+    border: none; }
+    .subs__sub:hover {
+      background-color: #953c22; }
+  .subs__form {
+    display: block; }
+
 /*# sourceMappingURL=style.css.map */
