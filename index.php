@@ -53,13 +53,15 @@
 			</div>
 		</div>
 	</header>
-
+<!-- Слайдер Изображений -->
 	<section class="slider">
 		
 	</section>
-	<div class="container-fluid">
-		<div class="row">
-			<section class="stock">
+<!-- Слайдер Изображений -->
+	
+	<section class="stock">
+		<div class="container-fluid">
+			<div class="row">
 				<div class="container">
 					<h1 class="block_title">Народный напиток в каждый дом</h1>
 					<h4>Мы рады сделать Иван-чай доступным для каждой семьи</h4>
@@ -104,105 +106,118 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+		</div>
+	</section>
 
-			<section class="store">
-				<div class="container-fluid">
+	<section class="store">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container">
 					<div class="row">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
 									</div>
 								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
-									</div>
-								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
 							</div>
-							<a href="#" class="show-more">Показать еще чаи</a>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
+									</div>
+								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
+									</div>
+								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
+									</div>
+								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
+									</div>
+								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="store__item">
+								<h3>Бальзам</h3>
+								<h5>Иван-чай</h5>
+								<div class="store__thumb">
+									<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
+									<div class="store__thumb--text">
+										<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
+									</div>
+								</div>
+								<h4>Цена: <b>340.00 р.</b></h4>
+								<a href="#" class="buy-but">Купить</a>
+							</div>
 						</div>
 					</div>
+					<a href="#" class="show-more">Показать еще чаи</a>
 				</div>
-			</section>
+			</div>
 		</div>
-	</div>
+	</section>
+ <!-- Слайдер блога -->
+	<section class="blog">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+ <!-- Слайдер блога -->
+
+ 	section.
     
 <?php wp_footer(); ?>
 </body>
