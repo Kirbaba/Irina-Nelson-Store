@@ -276,7 +276,7 @@
  		<div class="container-fluid">
  			<div class="row">
  				<div class="container">
- 					<h1 class="block_title">Отзывы покупател</h1>
+ 					<h1 class="block_title">Отзывы покупателей</h1>
  					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
  						<div class="reviews__item">
  							<p>«Иван чай посоветовал один знакомый доктор. Стал пить и почти в первые же дни почувствовал значительные улучшения. Давление и самочувствие нормализовались. Пропил месяц, гипертония прошла. Сейчас чувствую себя замечательно».</p>

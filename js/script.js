@@ -60,6 +60,8 @@ $(function () {
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
         responsive: [
             {
                 breakpoint: 1024,
@@ -99,7 +101,9 @@ $(function () {
         console.log(block);
         return false;
     });
-});jQuery(document).ready(function($) {
+});
+
+jQuery(document).ready(function($) {
 
 $(function() {
 
