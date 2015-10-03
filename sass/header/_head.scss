@@ -1,0 +1,40 @@
+.header {
+	display: block;
+	width: 100%;
+	position: relative;
+	float: left;
+	background-image: url('../img/main-bg.png');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	padding-top: 60px;
+	padding-bottom: 20px;
+	h4 {
+		font-size: 1.750em;
+		text-align: center;
+		color: #FFF;
+		span {
+			color: #DEA74F;
+		}
+	}
+	&__slogan {
+		margin-top: 30px;
+	}
+	&__logo {
+		img {
+			width: 132px;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	&__phone {
+		margin-top: 25px;
+		p {
+			text-align: center;
+			color: #FFF;
+			font-family: $mpreg;
+			font-size: 1.438em;
+		}
+	}
+}

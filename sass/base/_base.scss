@@ -1,0 +1,30 @@
+body {
+	font-family: $book;
+}
+a {
+	text-decoration: none;
+	&:hover, &:focus, &:active{
+		outline: none;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+.block_title {
+	color: #fff;
+    font-size: 3.5em;
+	text-align: center;
+	margin-top: 15px;	
+}
+
+h2.number {
+	color: #FFBF4F;
+	font-size: 3.125em;
+	text-align: center;
+	font-family: $bold;	
+	margin: 10px 0 0;
+}
+
+

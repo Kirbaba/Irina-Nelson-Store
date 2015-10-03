@@ -1,0 +1,75 @@
+$book: "OfficinaSerifBook"; 
+$bold: "OfficinaSerifBold";
+$mpreg: "MyriadProRegular";
+
+/* font-family: "OfficinaSerifBook"; */
+@font-face {
+    font-family: "OfficinaSerifBook";
+    src: url("../fonts/OfficinaSerifBook/OfficinaSerifBook.eot");
+    src: url("../fonts/OfficinaSerifBook/OfficinaSerifBook.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifBook/OfficinaSerifBook.woff") format("woff"),
+    url("../fonts/OfficinaSerifBook/OfficinaSerifBook.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OfficinaSerifBookItalic"; */
+@font-face {
+    font-family: "OfficinaSerifBookItalic";
+    src: url("../fonts/OfficinaSerifBookItalic/OfficinaSerifBookItalic.eot");
+    src: url("../fonts/OfficinaSerifBookItalic/OfficinaSerifBookItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifBookItalic/OfficinaSerifBookItalic.woff") format("woff"),
+    url("../fonts/OfficinaSerifBookItalic/OfficinaSerifBookItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OfficinaSerifMedium"; */
+@font-face {
+    font-family: "OfficinaSerifMedium";
+    src: url("../fonts/OfficinaSerifMedium/OfficinaSerifMedium.eot");
+    src: url("../fonts/OfficinaSerifMedium/OfficinaSerifMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifMedium/OfficinaSerifMedium.woff") format("woff"),
+    url("../fonts/OfficinaSerifMedium/OfficinaSerifMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OfficinaSerifMediumItalic"; */
+@font-face {
+    font-family: "OfficinaSerifMediumItalic";
+    src: url("../fonts/OfficinaSerifMediumItalic/OfficinaSerifMediumItalic.eot");
+    src: url("../fonts/OfficinaSerifMediumItalic/OfficinaSerifMediumItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifMediumItalic/OfficinaSerifMediumItalic.woff") format("woff"),
+    url("../fonts/OfficinaSerifMediumItalic/OfficinaSerifMediumItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OfficinaSerifBold"; */
+@font-face {
+    font-family: "OfficinaSerifBold";
+    src: url("../fonts/OfficinaSerifBold/OfficinaSerifBold.eot");
+    src: url("../fonts/OfficinaSerifBold/OfficinaSerifBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifBold/OfficinaSerifBold.woff") format("woff"),
+    url("../fonts/OfficinaSerifBold/OfficinaSerifBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OfficinaSerifBoldItalic"; */
+@font-face {
+    font-family: "OfficinaSerifBoldItalic";
+    src: url("../fonts/OfficinaSerifBoldItalic/OfficinaSerifBoldItalic.eot");
+    src: url("../fonts/OfficinaSerifBoldItalic/OfficinaSerifBoldItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OfficinaSerifBoldItalic/OfficinaSerifBoldItalic.woff") format("woff"),
+    url("../fonts/OfficinaSerifBoldItalic/OfficinaSerifBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "MyriadProRegular"; */
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
