@@ -525,6 +525,21 @@ h2.number {
       top: 0;
       background-image: url("../img/my-world-1.png"); }
 
+.blog .slide-image img {
+  width: 100%; }
+.blog .slick-prev {
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 60px;
+  height: 172px; }
+.blog .slick-next {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  width: 60px;
+  height: 172px; }
+
 @media only screen and (max-width: 500px) {
   .social__but {
     width: 212px; } }
