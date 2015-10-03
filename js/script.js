@@ -91,7 +91,15 @@ $(function () {
     });
 
 });
-jQuery(document).ready(function($) {
+$(function () {
+    $(document).on('click', '.buy-but', function(){
+        var block = $(this).parent().parent();
+
+        var title = block.children('h3').text();
+        console.log(block);
+        return false;
+    });
+});jQuery(document).ready(function($) {
 
 $(function() {
 
