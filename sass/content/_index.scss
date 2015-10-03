@@ -1,0 +1,126 @@
+.stock {
+	background-image: url('../img/main-bg.png');
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px 0;
+    display: block;
+    float: left;
+    width: 100%;
+    h4 {
+    	text-align: center;
+    	font-family: $mpreg;
+    	font-size: 1.625em;
+    	color: $acent;
+    }
+    &__item {
+    	display: block;
+    	max-width: 336px;
+    	margin: 15px auto; 
+    	width: 100%;
+		height: 260px;
+		@include border-radius(17px);
+		@include background-clip(padding-box);
+		border: 5px solid #cfbf8d;
+		padding: 10px;
+		img {
+			max-width: 90%;
+			display: block;
+			margin: 0 auto;
+		    max-height: 180px;
+		}
+		&-1 {
+			position: relative;
+			margin-top: 20px;
+			h3 {
+				color: $acent;
+				text-align: center;
+				font-family: $mpreg;
+				font-size: 1.375em;
+				margin: 0 0 5px;
+			}
+			p {
+				font-size: 0.938em;
+				color: $acent;
+				text-align: center;
+			}
+			h2 {
+				color: #FFF;
+				font-family: $bold;
+				font-size: 2.938em;
+				text-align: center;
+				margin: 5px 0;
+			}
+			.old-price {
+				position: relative;
+				p {
+					color: #FFF;
+					text-align: center;
+					font-style: italic;
+					font-size: 1.500em;
+				}
+				&:before, &:after {
+					content: "";					
+				}
+				&:before {
+				    border-top: 1px solid #fff;
+					display: block;
+					width: 70px;
+					position: absolute;
+					/* margin: 0 auto; */
+					top: 15px;
+					left: 30px;
+					transform: rotate(20deg);					
+				}
+				&:after {
+					border-bottom: 1px solid #fff;
+					display: block;
+					width: 70px;
+					position: absolute;
+					bottom: 15px;
+					left: 30px;
+					transform: rotate(-20deg);	
+				}				
+			}
+			img {
+				width: 100%;
+			}
+			small {
+				color: $acent; 
+				position: relative;				
+				text-align: center;
+				font-size: 0.788em;
+				display: block;
+				margin-top: 20px;
+			}
+		}
+		&-2 {
+			h2 {
+				font-family: $bold;
+				color: #fff;
+				text-align: center;
+				margin: 0 0 5px;
+				font-size: 3.438em;
+				span {
+					color: #F1C349;
+				}			
+			}
+			h4 {
+				color: $acent;
+				text-align: center;
+				font-size: 1.35em;
+				font-family: $book;
+			}
+		}
+		&-3 {
+			margin-top: 10px;
+			h3 {
+				color: #FFF;
+				text-align: center;
+				font-size: 2.438em;
+				margin-top: 5px;
+			}
+		}
+    }
+}

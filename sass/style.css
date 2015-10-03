@@ -71,9 +71,13 @@ h2.number {
   font-family: "OfficinaSerifBold";
   margin: 10px 0 0; }
 
+.p0 {
+  padding: 0; }
+
 .navbar-nav {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin: 5px 0; }
   .navbar-nav li {
     float: none;
     display: inline-block; }
@@ -94,6 +98,9 @@ h2.number {
   height: 60px; }
 
 @media only screen and (max-width: 770px) {
+  .navigation {
+    background: #3e2c22; }
+
   .navbar-nav {
     margin: 0;
     background-color: #888;
@@ -144,5 +151,114 @@ h2.number {
       color: #FFF;
       font-family: "MyriadProRegular";
       font-size: 1.438em; }
+
+.stock {
+  background-image: url("../img/main-bg.png");
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 0;
+  display: block;
+  float: left;
+  width: 100%; }
+  .stock h4 {
+    text-align: center;
+    font-family: "MyriadProRegular";
+    font-size: 1.625em;
+    color: #f7ce90; }
+  .stock__item {
+    display: block;
+    max-width: 336px;
+    margin: 15px auto;
+    width: 100%;
+    height: 260px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    border-radius: 17px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 5px solid #cfbf8d;
+    padding: 10px; }
+    .stock__item img {
+      max-width: 90%;
+      display: block;
+      margin: 0 auto;
+      max-height: 180px; }
+    .stock__item-1 {
+      position: relative;
+      margin-top: 20px; }
+      .stock__item-1 h3 {
+        color: #f7ce90;
+        text-align: center;
+        font-family: "MyriadProRegular";
+        font-size: 1.375em;
+        margin: 0 0 5px; }
+      .stock__item-1 p {
+        font-size: 0.938em;
+        color: #f7ce90;
+        text-align: center; }
+      .stock__item-1 h2 {
+        color: #FFF;
+        font-family: "OfficinaSerifBold";
+        font-size: 2.938em;
+        text-align: center;
+        margin: 5px 0; }
+      .stock__item-1 .old-price {
+        position: relative; }
+        .stock__item-1 .old-price p {
+          color: #FFF;
+          text-align: center;
+          font-style: italic;
+          font-size: 1.500em; }
+        .stock__item-1 .old-price:before, .stock__item-1 .old-price:after {
+          content: ""; }
+        .stock__item-1 .old-price:before {
+          border-top: 1px solid #fff;
+          display: block;
+          width: 70px;
+          position: absolute;
+          /* margin: 0 auto; */
+          top: 15px;
+          left: 30px;
+          transform: rotate(20deg); }
+        .stock__item-1 .old-price:after {
+          border-bottom: 1px solid #fff;
+          display: block;
+          width: 70px;
+          position: absolute;
+          bottom: 15px;
+          left: 30px;
+          transform: rotate(-20deg); }
+      .stock__item-1 img {
+        width: 100%; }
+      .stock__item-1 small {
+        color: #f7ce90;
+        position: relative;
+        text-align: center;
+        font-size: 0.788em;
+        display: block;
+        margin-top: 20px; }
+    .stock__item-2 h2 {
+      font-family: "OfficinaSerifBold";
+      color: #fff;
+      text-align: center;
+      margin: 0 0 5px;
+      font-size: 3.438em; }
+      .stock__item-2 h2 span {
+        color: #F1C349; }
+    .stock__item-2 h4 {
+      color: #f7ce90;
+      text-align: center;
+      font-size: 1.35em;
+      font-family: "OfficinaSerifBook"; }
+    .stock__item-3 {
+      margin-top: 10px; }
+      .stock__item-3 h3 {
+        color: #FFF;
+        text-align: center;
+        font-size: 2.438em;
+        margin-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */
