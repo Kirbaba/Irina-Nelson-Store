@@ -32,7 +32,7 @@
 		}
 		&-1 {
 			position: relative;
-			margin-top: 20px;
+			margin-top: 10px;
 			h3 {
 				color: $acent;
 				text-align: center;
@@ -94,6 +94,23 @@
 				display: block;
 				margin-top: 20px;
 			}
+			.buy-but {
+				width: 112px;
+				height: 40px;
+				margin: 0 auto;
+				@include border-radius(17px);
+				@include background-clip(padding-box);
+				background-color: #bf4d2b;
+				font-family: $bold;
+				text-align: center;
+				line-height: 40px;
+				color: #FFF;
+				display: block;
+				text-decoration: none;
+				&:hover {
+					background-color: lighten(#bf4d2b, 10%);
+				}
+			}
 		}
 		&-2 {
 			h2 {
@@ -123,4 +140,115 @@
 			}
 		}
     }
+}
+
+.store {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 20px 0;
+	background-color: #FBF5E9;
+	background-repeat: no-repeat;
+	background-image: url('../img/flow-bg.png');
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 0 50%;
+	&__item	{
+		@include transition(0.5);
+		h3 {
+			font-size: 2.438em;
+			text-align: center;
+			font-family: $bold;
+			color: #743F31;
+		}
+		h5 {
+			font-size: 1.438em;
+			text-align: center;
+			color: #A2643F;
+		}	
+		h4 {
+			text-align: center;
+			color: #897262;
+			font-size: 1.813em;
+			b {
+				color: #BF4E2B;
+				font-family: $bold;
+			}
+		}
+		.buy-but {
+			display: block;
+			position: relative;
+			font-size: 1.563em;
+			text-align: center;
+			color: #FFF;
+			width: 125px;
+			height: 45px;
+			@include border-radius(17px);
+			@include background-clip(padding-box);
+			background-color: #a1543c;
+			margin: 10px auto;
+			line-height: 45px;
+			text-decoration: none;
+			&:hover {
+				background-color: #BF4E2B;
+			}
+		}
+		&:hover {
+			h3 {
+				color: #BF4E2B;
+			}
+			.store__thumb {
+				&--text {
+					display: block;
+				}
+			}
+		}	
+	}	
+	&__thumb {
+		position: relative;
+		width: 100%;
+		height: 300px;
+		img {
+			margin-top: 20px;
+			width: auto;
+			height: auto;
+			max-height: 300px;
+			display: block;
+			margin: 0 auto;
+		}
+		&--text {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 10px;
+			background: rgba(134, 101, 85, 0.61);
+			p {
+				color: #FFF;
+				font-family: $mpreg;
+				font-size: 1.063em;
+			}
+		}	
+	}
+	.show-more {
+		font-size: 1.250em;
+		text-align: center;
+		width: 204px;
+		display: block;
+		height: 42px;
+		line-height: 42px;
+		@include border-radius(17px);
+		@include background-clip(padding-box);
+		background-color: #a28457;
+		text-decoration: none;
+		color: #fff;
+		margin: 25px auto;
+		&:hover {
+			background-color: darken(#a28457, 10%);
+		}
+	}
 }
