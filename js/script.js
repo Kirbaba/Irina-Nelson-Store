@@ -28,7 +28,6 @@
  window.onload = loadScript;
  */
 
-
 $(function () {
 
     $(window).scroll(function () {
@@ -55,7 +54,7 @@ $(function () {
 $(function () {
 
     $('.responsive').slick({
-        dots: true,
+        dots: false,
         infinite: false,
         autoplay: true,
         speed: 300,
@@ -68,7 +67,7 @@ $(function () {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
@@ -92,3 +91,31 @@ $(function () {
     });
 
 });
+jQuery(document).ready(function($) {
+
+$(function() {
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop: 0}, 1000);
+    });
+
+    $('.smoothScroll').click(function(event) {
+        event.preventDefault();        
+        var href=$(this).attr('href');
+        var target=$(href);
+        var top=target.offset().top;
+        console.log(top);
+        $('html,body').animate({
+            scrollTop: top
+        }, 1000);
+    });
+});
+});
+

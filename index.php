@@ -13,7 +13,8 @@
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 </head>
 <body>
-	<header class="header">
+	<a id="go_home" name="go_home"></a>
+	<header class="header">		
 		<nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation">
 		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,11 +29,11 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">		      	     
 		      <ul class="nav navbar-nav navbar-center navigation__list">		      
-		        <li><a href="#">Главная</a></li>
-		        <li><a href="#">Акции</a></li>
-		        <li><a href="#">Статьи</a></li>
-		        <li><a href="#">Отзывы</a></li>
-		        <li><a href="#">Подписка</a></li>  		       
+		        <li><a href="#go_home" class="smoothScroll">Главная</a></li>
+		        <li><a href="#go_stock" class="smoothScroll">Акции</a></li>
+		        <li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
+		        <li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
+		        <li><a href="#go_subs" class="smoothScroll">Подписка</a></li>  		       
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -58,10 +59,11 @@
 	<section class="slider">
 	</section>
 
-	<div class="container-fluid">
+	<div class="container-fluid">		
 		<div class="row">
-			<section class="stock">
+			<section class="stock">				
 				<div class="container">
+					<a id="go_stock" name="go_stock" class="go"></a>
 					<h1 class="block_title">Народный напиток в каждый дом</h1>
 					<h4>Мы рады сделать Иван-чай доступным для каждой семьи</h4>
 					<div class="row">
@@ -208,7 +210,9 @@
 
 	</section>
  <!-- Слайдер блога -->
+
 	<section class="blog">
+		<a id="go_blog" name="go_blog" class="go"></a>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="container">
@@ -217,33 +221,45 @@
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-							</div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide2.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide3.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
 
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide2.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="slide-date"><p>12 марта 2015</p></div>
 								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide3.png" alt=""></div>
-								<div class="slide-text"><p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
+								<div class="slide-text">
+									<h4>Полезные свойства Иван-чая</h4>
+									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
 
 							</div>
 
@@ -256,6 +272,7 @@
  <!-- Слайдер блога -->
 
  	<section class="reviews">
+ 		<a id="go_reviews" name="go_reviews" class="go"></a>
  		<div class="container-fluid">
  			<div class="row">
  				<div class="container">
@@ -281,6 +298,7 @@
  	</section>
 
  	<section class="subs">
+ 		<a id="go_subs" name="go_subs" class="go"></a>
  		<div class="container-fluid">
  			<div class="row">
  				<h1 class="block_title">Подписка на новости</h1>
@@ -339,11 +357,11 @@
  			<div class="row">
  				<div class="container">	
 					<ul class="nav navbar-nav navbar-center navigation__list">		      
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Акции</a></li>
-						<li><a href="#">Статьи</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Подписка</a></li>  		       
+						<li><a href="#go_home" class="smoothScroll">Главная</a></li>
+						<li><a href="#go_stock" class="smoothScroll">Акции</a></li>
+						<li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
+						<li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
+						<li><a href="#go_subs" class="smoothScroll">Подписка</a></li>  	       
 					</ul>
 					<h2 class="number">8 800 003 99 22</h2>
  				</div>
