@@ -241,6 +241,26 @@
  			</div>
  		</div>
  	</section>
+
+ 	<section class="subs">
+ 		<div class="container-fluid">
+ 			<div class="row">
+ 				<h1 class="block_title">Подписка на новости</h1>
+ 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+ 					
+					<form action="">
+						<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+							<input type="email" class="subs__input" placeholder="Ведите Ваш e-mail:">
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 p0">
+							<input type="submit" class="subs__sub" value="Подписаться">
+						</div>
+					</form>
+					
+				</div>
+ 			</div>
+ 		</div>
+ 	</section>
     
 <?php wp_footer(); ?>
 </body>
