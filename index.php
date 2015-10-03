@@ -6,10 +6,11 @@
     <meta name="description" content="">
     <link rel="icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE">
-    </script>
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE"></script>
+	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
     <?php wp_head(); ?>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -55,8 +56,8 @@
 	</header>
 
 	<section class="slider">
-		
 	</section>
+
 	<div class="container-fluid">
 		<div class="row">
 			<section class="stock">
