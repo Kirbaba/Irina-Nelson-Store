@@ -20,9 +20,18 @@ function add_script(){
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
     wp_enqueue_script( 'glide', get_template_directory_uri() . '/js/jquery.glide.js', array(), '1');
-    
+
 }
 
+function add_admin_script(){
+    wp_enqueue_script('admin',get_template_directory_uri() . '/js/admin.js', array(), '1');
+    wp_enqueue_style( 'my-bootstrap-extension-admin', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
+    wp_enqueue_style( 'my-style-admin', get_template_directory_uri() . '/css/admin.css', array(), '1');
+
+
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_script');
 add_action( 'wp_enqueue_scripts', 'add_style' );
 add_action( 'wp_enqueue_scripts', 'add_script' );
 
@@ -61,22 +70,52 @@ add_filter('excerpt_more', 'excerpt_readmore');
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
 
-//function register_slider_page(){
-//    add_menu_page(
-//        'Управление слайдером', 'Слайдер', 'manage_options', 'slider_top', 'admin_slider_page', '', 200
-//    );
-//}
-//add_action( 'admin_menu', 'register_slider_page' );
+/*------------------------Слайдер (top)------------------------------*/
+
+function register_slider_page(){
+    add_menu_page(
+        'Управление слайдером', 'Слайдер', 'manage_options', 'slider_top', 'admin_slider_page', '', 200
+    );
+}
+add_action( 'admin_menu', 'register_slider_page' );
 
 function admin_slider_page(){
+    global $wpdb;
+    $parser = new Parser();
 
+    if(isset($_GET['del'])){
+        $wpdb->delete( 'slider_top', ['id'=>$_GET['del']] );
+    }
+    if(isset($_POST['attachment_url'])){
+        //prn($_POST);
+        $wpdb->insert( 'slider_top', ['link' => $_POST['attachment_url']] );
+    }
+
+    $slids = $wpdb->get_results('SELECT * FROM `slider_top`', ARRAY_A);
+
+    //prn($slids);
+
+    if (function_exists('wp_enqueue_media')) {
+        wp_enqueue_media();
+    } else {
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
+    }
+
+
+    $parser->render(TM_DIR . '/views/slider_admin_page.php', ['slids'=>$slids]);
 }
 
 function print_slider() {
+    global $wpdb;
     $parser = new Parser();
-    $parser->render(TM_DIR . '/views/slider.php', []);
+    $slids = $wpdb->get_results('SELECT * FROM `slider_top`', ARRAY_A);
+    $parser->render(TM_DIR . '/views/slider.php', ['slids'=>$slids]);
 }
 add_shortcode('slider_top', 'print_slider');
+
+
 
 /*------------------------СТРАНИЦА СОБЫТИЯ------------------------------*/
 add_action('init', 'my_custom_init_store');

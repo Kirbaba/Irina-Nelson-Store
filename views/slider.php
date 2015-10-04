@@ -15,12 +15,9 @@
 </style>
 <div class="slider-top">
     <ul class="slides-top">
-        <li class="slide-top"><div class="box-top" style="background-color: #1abc9c;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
-        <li class="slide-top"><div class="box-top" style="background-color: #16a085;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
-        <li class="slide-top"><div class="box-top" style="background-color: #f1c40f;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
-        <li class="slide-top"><div class="box-top" style="background-color: #f39c12;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
-        <li class="slide-top"><div class="box-top" style="background-color: #d35400;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
-        <li class="slide-top"><div class="box-top" style="background-color: #c0392b;"><img src="<?php bloginfo('template_directory'); ?>/img/slide.png" alt=""></div></li>
+        <?php foreach($slids as $s) { ?>
+            <li class="slide-top"><div class="box-top" ><img src="<?= $s['link'] ?>" alt=""></div></li>
+        <?php } ?>
     </ul>
 </div>
 
