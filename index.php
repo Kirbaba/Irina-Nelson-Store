@@ -114,10 +114,10 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="container">
-							<div class="row" >
+							<div class="row store-row" >
 								<?php echo do_shortcode('[store]')?>
 							</div>
-							<a href="#" class="show-more">Показать еще чаи</a>
+							<a href="#" class="show-more more-tea" data-page="2">Показать еще чаи</a>
 						</div>
 					</div>
 				</div>
@@ -138,7 +138,10 @@
  				<div class="container">
  					<h1 class="block_title">Отзывы покупателей</h1>
  					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
-						<?php echo do_shortcode('[reviews]')?>
+						<div class="review-row">
+							<?php echo do_shortcode('[reviews]')?>
+						</div>
+
 <!-- 						<div class="reviews__item">-->
 <!-- 							<p>«Иван чай посоветовал один знакомый доктор. Стал пить и почти в первые же дни почувствовал значительные улучшения. Давление и самочувствие нормализовались. Пропил месяц, гипертония прошла. Сейчас чувствую себя замечательно».</p>-->
 <!-- 							<p class="author">Константин Владимирович, 53 года</p>-->
@@ -151,7 +154,7 @@
 <!-- 							<p>«Хорошо помогает при гепатите. Лечу гепатит С уже год таблетками. Месяц назад стал дополнительно заваривать сбор. Эффективность лечения увеличилась в разы, что отметил даже врач. Есть все надежды, что избавлюсь от этого вируса раз и навсегда. Очень на это надеюсь».</p>-->
 <!-- 							<p class="author">Константин, 29 лет</p>-->
 <!-- 						</div>-->
- 						<a  href="#" class="show-more">Показать еще статьи</a>
+ 						<a  href="#" class="show-more more-review" data-page="2">Показать еще статьи</a>
  					</div>
  				</div>
  			</div>
@@ -170,7 +173,7 @@
 							<input type="email" class="subs__input" placeholder="Ведите Ваш e-mail:">
 						</div>
 						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 p0">
-							<input type="submit" class="subs__sub" value="Подписаться">
+							<input type="button" class="subs__sub" value="Подписаться">
 						</div>
 					</form>
 					

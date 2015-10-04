@@ -244,17 +244,24 @@ function my_extra_fields_update( $post_id ){
 }
 
 function store_sc(){
-    global $wpdb;
+    if($_POST['num']){
+        $page = $_POST['num'];
+    }else{
+        $page = 1;
+    }
 
     $html = '';
     $type = 'store';
     $args = array(
         'post_type' => $type,
         'post_status' => 'publish',
-        'posts_per_page' => 3);
+        'posts_per_page' => 3,
+        'paged'=> $page);
 
     $my_query = null;
     $my_query = new WP_Query($args);
+
+    //prn($my_query);
 
     if( $my_query->have_posts() ) {
         while ($my_query->have_posts()) : $my_query->the_post();
@@ -279,29 +286,50 @@ function store_sc(){
     }
     wp_reset_query();  // Restore global post data stomped by the_post().
 
-    return $html;
+    echo $html;
+
+    if($_POST['num']){
+        die();
+    }
+
 }
 
 add_shortcode('store', 'store_sc');
 
 function reviews_sc(){
+
+    if($_POST['num']){
+        $page = $_POST['num'];
+    }else{
+        $page = 1;
+    }
+
     $type = 'reviews';
     $args = array(
         'post_type' => $type,
         'post_status' => 'publish',
-        'posts_per_page' => 3);
+        'posts_per_page' => 3,
+        'paged'=> $page);
 
     $my_query = null;
     $my_query = new WP_Query($args);
 
     $parser = new Parser();
     $parser->render(TM_DIR . '/views/reviews.php', ['my_query' => $my_query]);
+
+    if($_POST['num']){
+        die();
+    }
+
+
 }
 
 add_shortcode('reviews', 'reviews_sc');
 
 add_action('wp_ajax_order', 'set_order');
 add_action('wp_ajax_subscription', 'add_subscribe');
+add_action('wp_ajax_store_more', 'store_sc');
+add_action('wp_ajax_review_more', 'reviews_sc');
 
 function set_order(){
 

@@ -144,5 +144,35 @@ jQuery(document).ready(function($) {
             }
         });
     });
+
+    $(document).on('click', '.more-tea', function(){
+        var num = $(this).attr('data-page');
+
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=store_more&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                $('.store-row').append(data);
+                $(this).attr('data-page', num+1);
+            }
+        });
+        return false;
+    });
+
+    $(document).on('click', '.more-review', function(){
+        var num = $(this).attr('data-page');
+
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=review_more&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                $('.review-row').append(data);
+                $(this).attr('data-page', num+1);
+            }
+        });
+        return false;
+    });
 });
 
