@@ -49,7 +49,7 @@
 					<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="">
 				</div>
 				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 header__phone">
-					<h2 class="number">8 800 003 99 22</h2>
+					<h2 class="number"><?php echo get_theme_mod('phone_textbox'); ?></h2>
 					<p>Свяжитесь с нами</p>
 				</div>
 			</div>
@@ -196,14 +196,14 @@
  							</div>
  							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
  								<div class="social__but">
-	 								<a href="#"><i class="fa fa-twitter"></i></a>
-	 								<a href="#"><i class="fa fa-vk"></i></a>								
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-									<a href="#"><i class="fa  fa-google-plus"></i></a>
-	 								<a href="#"><i class="my-world"></i></a>								
-									<a href="#"><i class="fa fa-odnoklassniki"></i></a>									
-									<a href="#"><i class="fa fa-youtube"></i></a>
+	 								<a href="<?php echo get_theme_mod('tw_textbox'); ?>"><i class="fa fa-twitter"></i></a>
+	 								<a href="<?php echo get_theme_mod('vk_textbox'); ?>"><i class="fa fa-vk"></i></a>
+									<a href="<?php echo get_theme_mod('fb_textbox'); ?>"><i class="fa fa-facebook"></i></a>
+									<a href="<?php echo get_theme_mod('insta_textbox'); ?>"><i class="fa fa-instagram"></i></a>
+									<a href="<?php echo get_theme_mod('gpl_textbox'); ?>"><i class="fa  fa-google-plus"></i></a>
+	 								<a href="<?php echo get_theme_mod('smile_textbox'); ?>"><i class="my-world"></i></a>
+									<a href="<?php echo get_theme_mod('ok_textbox'); ?>"><i class="fa fa-odnoklassniki"></i></a>
+									<a href="<?php echo get_theme_mod('yt_textbox'); ?>"><i class="fa fa-youtube"></i></a>
 								</div>
  							</div>
  						</div>
@@ -227,7 +227,7 @@
 						<li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
 						<li><a href="#go_subs" class="smoothScroll">Подписка</a></li>  	       
 					</ul>
-					<h2 class="number">8 800 003 99 22</h2>
+					<h2 class="number"><?php echo get_theme_mod('phone_textbox'); ?></h2>
  				</div>
  			</div>
  		</div>

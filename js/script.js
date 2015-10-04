@@ -153,8 +153,9 @@ jQuery(document).ready(function($) {
             type: "POST",
             data: "action=store_more&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function(data){
+                num = num+1;
                 $('.store-row').append(data);
-                $(this).attr('data-page', num+1);
+                $('.more-tea').attr('data-page', num);
             }
         });
         return false;
@@ -169,7 +170,7 @@ jQuery(document).ready(function($) {
             data: "action=review_more&num=" +num, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function(data){
                 $('.review-row').append(data);
-                $(this).attr('data-page', num+1);
+                $('.more-review').attr('data-page', num+1);
             }
         });
         return false;

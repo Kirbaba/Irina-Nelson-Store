@@ -255,7 +255,7 @@ function store_sc(){
     $args = array(
         'post_type' => $type,
         'post_status' => 'publish',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'paged'=> $page);
 
     $my_query = null;
@@ -354,4 +354,136 @@ function add_subscribe(){
     die();
 }
 
+/**
+ * Добавляет секции, параметры и элементы управления (контролы) на страницу настройки темы
+ */
+add_action('customize_register', function($customizer){
+    /*Меню настройки контактов*/
+    $customizer->add_section(
+        'contacts_section',
+        array(
+            'title' => 'Настройки контактов',
+            'description' => 'Контакты',
+            'priority' => 35,
+        )
+    );
+    $customizer->add_setting(
+        'phone_textbox',
+        array('default' => '8 800 003 99 22')
+    );
+    $customizer->add_control(
+        'phone_textbox',
+        array(
+            'label' => 'Телефон',
+            'section' => 'contacts_section',
+            'type' => 'text',
+        )
+    );
+    /*меню настройки соц сетей*/
+    $customizer->add_section(
+        'social_section',
+        array(
+            'title' => 'Соц. сети',
+            'description' => 'Ссылки на соц. сети',
+            'priority' => 35,
+        )
+    );
+    $customizer->add_setting(
+        'tw_textbox',
+        array('default' => 'http://twitter.com/')
+    );
+    $customizer->add_setting(
+        'vk_textbox',
+        array('default' => 'http://vk.com/')
+    );
+    $customizer->add_setting(
+        'fb_textbox',
+        array('default' => 'http://facebook.com/')
+    );
+    $customizer->add_setting(
+        'insta_textbox',
+        array('default' => 'http://instagram.com/')
+    );
+    $customizer->add_setting(
+        'gpl_textbox',
+        array('default' => 'https://plus.google.com')
+    );
+    $customizer->add_setting(
+        'smile_textbox',
+        array('default' => '')
+    );
+    $customizer->add_setting(
+        'ok_textbox',
+        array('default' => 'http://ok.ru/')
+    );
+    $customizer->add_setting(
+        'yt_textbox',
+        array('default' => 'http://youtube.com/')
+    );
+
+    $customizer->add_control(
+        'vk_textbox',
+        array(
+            'label' => 'VKontakte',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'fb_textbox',
+        array(
+            'label' => 'Facebook',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'insta_textbox',
+        array(
+            'label' => 'Instagram',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'gpl_textbox',
+        array(
+            'label' => 'Google+',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'smile_textbox',
+        array(
+            'label' => 'Smile',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'ok_textbox',
+        array(
+            'label' => 'Одноклассники',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'tw_textbox',
+        array(
+            'label' => 'Twitter',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+    $customizer->add_control(
+        'yt_textbox',
+        array(
+            'label' => 'Youtube',
+            'section' => 'social_section',
+            'type' => 'text',
+        )
+    );
+});
 
