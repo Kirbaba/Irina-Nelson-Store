@@ -114,10 +114,10 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="container">
-							<div class="row" id="loop">
+							<div class="row" >
 								<?php echo do_shortcode('[store]')?>
 							</div>
-							<a id="pagination" href="#" class="show-more">Показать еще чаи</a>
+							<a href="#" class="show-more">Показать еще чаи</a>
 						</div>
 					</div>
 				</div>
