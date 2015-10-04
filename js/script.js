@@ -65,7 +65,7 @@ $(function () {
 
     $('.responsive').slick({
         dots: false,
-        infinite: false,
+        infinite: true,
         autoplay: true,
         speed: 300,
         slidesToShow: 3,
@@ -127,6 +127,20 @@ jQuery(document).ready(function($) {
                 // alert('Ваш заказ сделан. В ближайшее время с вами свяжутся. Спасибо.')
                 $('input[name="order-name"]').val('');
                 $('input[name="order-mail"]').val('');
+            }
+        });
+    });
+
+    $(document).on('click', '.subs__sub', function(){
+        var mail = $('.subs__input').val();
+
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=subscription&mail=" +mail, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                alert('Вы подписаны на новости!');
+               // console.log(data);
             }
         });
     });

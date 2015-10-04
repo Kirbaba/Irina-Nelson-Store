@@ -16,7 +16,6 @@ function add_style(){
 function add_script(){
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
     wp_enqueue_script( 'jq', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', array(), '1');
-    wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array(), '1');
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.js', array(), '1');
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
@@ -115,8 +114,6 @@ function print_slider() {
 }
 add_shortcode('slider_top', 'print_slider');
 
-
-
 /*------------------------Слайдер (блог)------------------------------*/
 
 function print_slider_blog() {
@@ -129,9 +126,6 @@ function print_slider_blog() {
     $parser->render(TM_DIR . '/views/blog_slider.php', ['posts'=>$posts]);
 }
 add_shortcode('slider_blog', 'print_slider_blog');
-
-
-
 
 /*------------------------СТРАНИЦА СОБЫТИЯ------------------------------*/
 add_action('init', 'my_custom_init_store');
@@ -307,6 +301,7 @@ function reviews_sc(){
 add_shortcode('reviews', 'reviews_sc');
 
 add_action('wp_ajax_order', 'set_order');
+add_action('wp_ajax_subscription', 'add_subscribe');
 
 function set_order(){
 
@@ -320,6 +315,14 @@ function set_order(){
     $price = get_post_meta($id, 'price', 1);
 
     mail($admin_email, "Заказ товара с вашего сайта", "С вашего сайта заказали товар:<br>ID товара: $id<br> Название: $title ( $subtitle ) <br>Цена: $price <br> Имя заказчика: $name<br> Email для связи: $mail","Content-type: text/html; charset=UTF-8\r\n");
+    die();
+}
+
+function add_subscribe(){
+    $mail = $_POST['mail'];
+    $admin_email = get_option('admin_email');
+
+    mail($admin_email, "Подписка на сайт", "На ваш сайт подписался данный email: $mail","Content-type: text/html; charset=UTF-8\r\n");
     die();
 }
 
