@@ -211,65 +211,7 @@
 
 	</section>
  <!-- Слайдер блога -->
-
-	<section class="blog">
-		<a id="go_blog" name="go_blog" class="go"></a>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="container">
-					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-						<div class="responsive">
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-								</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide2.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide3.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide1.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide2.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="slide-date"><p>12 марта 2015</p></div>
-								<div class="slide-image"><img src="<?php bloginfo('template_directory'); ?>/img/slide3.png" alt=""></div>
-								<div class="slide-text">
-									<h4>Полезные свойства Иван-чая</h4>
-									<p>Иван-чай - исконно русский напиток, проверенный веками и многими поколениями. Полезные свойства этого растения известны с давних времен - наши предки применяли его для лечения и профилактики различных заболеваний, а также использовали Иван-чай для утоления жажды и восстановления жизненных сил </p></div>
-
-							</div>
-
-						</div>
-					</div> 
-				</div>
-			</div>
-		</div>
-	</section>
+    <?php echo do_shortcode('[slider_blog]'); ?>
  <!-- Слайдер блога -->
 
  	<section class="reviews">

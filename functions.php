@@ -117,6 +117,22 @@ add_shortcode('slider_top', 'print_slider');
 
 
 
+/*------------------------Слайдер (блог)------------------------------*/
+
+function print_slider_blog() {
+    global $wpdb;
+    $parser = new Parser();
+    $catId = get_category_by_slug( 'blog' );
+    $catId = $catId->term_id;
+    $posts = get_posts(['numberposts'=>-1, 'category'=>$catId, 'order'=>'DESC']);
+    //prn($posts);
+    $parser->render(TM_DIR . '/views/blog_slider.php', ['posts'=>$posts]);
+}
+add_shortcode('slider_blog', 'print_slider_blog');
+
+
+
+
 /*------------------------СТРАНИЦА СОБЫТИЯ------------------------------*/
 add_action('init', 'my_custom_init_store');
 function my_custom_init_store()
