@@ -116,28 +116,24 @@ h2.number {
   color: #FFF;
   height: 60px; }
 
-@media only screen and (max-width: 770px) {
-  .navigation {
+@media only screen and (max-width: 767px) {
+  .header .navigation {
     background: #3e2c22; }
-
-  .navbar-nav {
+  .header .navbar-nav {
     margin: 0;
     background-color: #888;
     width: 100%; }
-    .navbar-nav li {
+    .header .navbar-nav li {
       display: block;
       width: 100%; }
-
-  .navbar-collapse {
+  .header .navbar-collapse {
     margin: 5px 0 0;
     padding: 0; }
-
-  .container > .navbar-collapse {
+  .header .container > .navbar-collapse {
     margin-top: 10px;
     padding: 0;
     border-top: 1px solid #000; }
-
-  .navbar-collapse .collapse .in {
+  .header .navbar-collapse .collapse .in {
     padding: 0; } }
 .header {
   display: block;
