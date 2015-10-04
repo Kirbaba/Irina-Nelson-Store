@@ -114,93 +114,10 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="container">
-							<div class="row">
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-									<div class="store__item">
-										<h3>Бальзам</h3>
-										<h5>Иван-чай</h5>
-										<div class="store__thumb">
-											<img src="<?php bloginfo('template_directory'); ?>/img/store.png" alt="">
-											<div class="store__thumb--text">
-												<p>Трава и соцветия лабазника обладают выраженным медово-сладким вкусом и ароматом. В Горном Алтае местные жители называют чаи из лабазника "покосным чаем". Его берут с собой на покос пастухи и лесничие, пьют его и не простывают, несмотря на холодные ночи в горах. Чай с лабазником очень вкусны</p>
-											</div>
-										</div>
-										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
-									</div>
-								</div>
+							<div class="row" id="loop">
+								<?php echo do_shortcode('[store]')?>
 							</div>
-							<a href="#" class="show-more">Показать еще чаи</a>
+							<a id="pagination" href="#" class="show-more">Показать еще чаи</a>
 						</div>
 					</div>
 				</div>
@@ -221,19 +138,20 @@
  				<div class="container">
  					<h1 class="block_title">Отзывы покупателей</h1>
  					<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
- 						<div class="reviews__item">
- 							<p>«Иван чай посоветовал один знакомый доктор. Стал пить и почти в первые же дни почувствовал значительные улучшения. Давление и самочувствие нормализовались. Пропил месяц, гипертония прошла. Сейчас чувствую себя замечательно».</p>
- 							<p class="author">Константин Владимирович, 53 года</p>
- 						</div>
- 						<div class="reviews__item">
- 							<p>«Страдаю много лет диабетом 2-го типа. Сахар в крови постоянно менялся. При этом, естественно, соблюдала диеты, но все равно за сутки изменения от 3,2 до 13 считались обычным делом. Последствия таких частых и сильных колебаний, думаю, известны каждому диабетику. После того как стала пить Иван чай, сахар стал изменяться в пределах 5-6, т.е. в диапазоне нормальных значений. А вместе с этим пришло и хорошее самочувствие».</p>
- 							<p class="author">Альбина, 53 года</p>
- 						</div>
- 						<div class="reviews__item">
- 							<p>«Хорошо помогает при гепатите. Лечу гепатит С уже год таблетками. Месяц назад стал дополнительно заваривать сбор. Эффективность лечения увеличилась в разы, что отметил даже врач. Есть все надежды, что избавлюсь от этого вируса раз и навсегда. Очень на это надеюсь».</p>
- 							<p class="author">Константин, 29 лет</p>
- 						</div>
- 						<a href="#" class="show-more">Показать еще статьи</a>
+						<?php echo do_shortcode('[reviews]')?>
+<!-- 						<div class="reviews__item">-->
+<!-- 							<p>«Иван чай посоветовал один знакомый доктор. Стал пить и почти в первые же дни почувствовал значительные улучшения. Давление и самочувствие нормализовались. Пропил месяц, гипертония прошла. Сейчас чувствую себя замечательно».</p>-->
+<!-- 							<p class="author">Константин Владимирович, 53 года</p>-->
+<!-- 						</div>-->
+<!-- 						<div class="reviews__item">-->
+<!-- 							<p>«Страдаю много лет диабетом 2-го типа. Сахар в крови постоянно менялся. При этом, естественно, соблюдала диеты, но все равно за сутки изменения от 3,2 до 13 считались обычным делом. Последствия таких частых и сильных колебаний, думаю, известны каждому диабетику. После того как стала пить Иван чай, сахар стал изменяться в пределах 5-6, т.е. в диапазоне нормальных значений. А вместе с этим пришло и хорошее самочувствие».</p>-->
+<!-- 							<p class="author">Альбина, 53 года</p>-->
+<!-- 						</div>-->
+<!-- 						<div class="reviews__item">-->
+<!-- 							<p>«Хорошо помогает при гепатите. Лечу гепатит С уже год таблетками. Месяц назад стал дополнительно заваривать сбор. Эффективность лечения увеличилась в разы, что отметил даже врач. Есть все надежды, что избавлюсь от этого вируса раз и навсегда. Очень на это надеюсь».</p>-->
+<!-- 							<p class="author">Константин, 29 лет</p>-->
+<!-- 						</div>-->
+ 						<a  href="#" class="show-more">Показать еще статьи</a>
  					</div>
  				</div>
  			</div>
@@ -332,6 +250,16 @@
 		</div>
 	</div>
 	<div class="wrap" style="width:100%"></div>
+	<script type="text/javascript">
+		addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+		var ajaxurl = '/wp-admin/admin-ajax.php',
+			pagenow = 'toplevel_page_mainpage',
+			typenow = '',
+			adminpage = 'toplevel_page_mainpage',
+			thousandsSeparator = ' ',
+			decimalPoint = ',',
+			isRtl = 0;
+	</script>
 <?php wp_footer(); ?>
 </body>
 </html>
