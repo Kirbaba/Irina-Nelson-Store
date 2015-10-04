@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 </head>
-<body>
+<body onload="initSliderArtCraft()">
 	<a id="go_home" name="go_home"></a>
 	<header class="header">		
 		<nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation">
@@ -57,6 +57,7 @@
 	</header>
 
 	<section class="slider">
+		<?php echo do_shortcode('[slider_top]'); ?>
 	</section>
 
 	<div class="container-fluid">		
@@ -81,7 +82,7 @@
 											<div class="old-price">
 												<p>400 <i class="fa fa-rub"></i></p>
 											</div>
-											<a href="#" class="buy-but">Купить</a>
+											<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 										</div>										
 									</div>
 									<small>Акция продлиться до 12 ноября 2015 г.</small>									
@@ -125,7 +126,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -139,7 +140,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -153,7 +154,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -167,7 +168,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -181,7 +182,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -195,7 +196,7 @@
 											</div>
 										</div>
 										<h4>Цена: <b>340.00 р.</b></h4>
-										<a href="#" class="buy-but">Купить</a>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
 									</div>
 								</div>
 							</div>
@@ -368,7 +369,27 @@
  			</div>
  		</div>
  	</footer>
-    
+	<!-- Modal -->
+	<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Оформление заказа</h4>
+				</div>
+				<div class="modal-body">
+					<p>Укажите ваше имя:</p>
+					<input type="text" name="order-name">
+					<p>Укажите ваш e-mail:</p>
+					<input type="email" name="order-mail">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap" style="width:100%"></div>
 <?php wp_footer(); ?>
 </body>
 </html>

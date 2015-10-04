@@ -28,6 +28,16 @@
  window.onload = loadScript;
  */
 
+function initSliderArtCraft(){
+    var widthWrap = $('.wrap').width();
+    var widthContainer = $('.container').width();
+    var distance = (widthWrap - widthContainer) / 2;
+    $('.slider-arrow--left').css({'left':distance});
+    $('.slider-arrow--right').css({'right':distance});
+    console.log(widthWrap);
+    console.log(widthContainer);
+}
+
 $(function () {
 
     $(window).scroll(function () {
@@ -104,30 +114,6 @@ $(function () {
 });
 
 jQuery(document).ready(function($) {
-
-$(function() {
-
-    $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
-            $('#toTop').fadeIn();
-        } else {
-            $('#toTop').fadeOut();
-        }
-    });
-    $('#toTop').click(function() {
-        $('body,html').animate({scrollTop: 0}, 1000);
-    });
-
-    $('.smoothScroll').click(function(event) {
-        event.preventDefault();        
-        var href=$(this).attr('href');
-        var target=$(href);
-        var top=target.offset().top;
-        console.log(top);
-        $('html,body').animate({
-            scrollTop: top
-        }, 1000);
-    });
-});
+    var glide = $('.slider-top').glide().data('api_glide');
 });
 
