@@ -10,7 +10,7 @@
                             <div class="slide-date"><p><?= $p->post_date ?></p></div>
                             <div class="slide-image"><?= get_the_post_thumbnail( $p->ID, 'full', [] ); ?></div>
                             <div class="slide-text">
-                                <h4><?= $p->post_title ?></h4>
+                                <h4><a href="<?= $p->guid ?>"><?= $p->post_title ?></a></h4>
                                 <p><?= $p->post_content ?></p></div>
                         </div>
                         <?php } ?>
