@@ -108,7 +108,6 @@ jQuery(document).ready(function($) {
     var id;
     var glide = $('.slider-top').glide().data('api_glide');
 
-
     $(document).on('click', '.buy-but', function(){
         id = $(this).attr('data-item');
         console.log(id);

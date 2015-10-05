@@ -85,7 +85,7 @@
 											<div class="old-price">
 												<p>400 <i class="fa fa-rub"></i></p>
 											</div>
-											<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal">Купить</a>
+											<a class="buy-but-service smoothScroll" href="#go_store">Купить</a>
 										</div>										
 									</div>
 									<small>Акция продлиться до 12 ноября 2015 г.</small>									

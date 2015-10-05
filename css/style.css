@@ -138,3 +138,24 @@
     color: white!important;
 }
 
+.buy-but-service {
+    width: 112px;
+    height: 40px;
+    margin: 0 auto;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    border-radius: 17px;
+    -o-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #bf4d2b;
+    font-family: "OfficinaSerifBold";
+    text-align: center;
+    line-height: 40px;
+    color: #FFF!important;
+    display: block;
+    text-decoration: none; }
+.buy-but-service:hover {
+    background-color: #d66847;
+}
+
