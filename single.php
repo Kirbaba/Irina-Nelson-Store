@@ -12,36 +12,11 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 </head>
-<body onload="initSliderArtCraft()">
+<body>
 <a id="go_home" name="go_home"></a>
 <header class="header">
-    <nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-center navigation__list">
-                    <li><a href="#go_home" class="smoothScroll">Главная</a></li>
-                    <li><a href="#go_stock" class="smoothScroll">Акции</a></li>
-                    <li><a href="#go_store" class="smoothScroll">Товары</a></li>
-                    <li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
-                    <li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
-                    <li><a href="#go_subs" class="smoothScroll">Подписка</a></li>
-                    <li><a href="/cart" >Корзина <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
     <div class="container">
+        <a  href="/" class="gohomelink" ><h4 class="number" ><span class="glyphicon glyphicon-share-alt"></span> Вернуться на главную</h4></a>
         <h1 class="block_title">Магазин экопродуктов Ирины Нельсон</h1>
         <h4><span>Элитный Иван-чай</span> по цене обычного</h4>
         <div class="row">
@@ -58,23 +33,57 @@
         </div>
     </div>
 </header>
-<section class="single">
-    <div class="container">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <?php if ( has_post_thumbnail() ): ?>
-                <h1 class="single__name"><?php the_title(); ?></h1>
-                <div class="single__thumb">
-                    <?php the_post_thumbnail('full', array('class'=>'new-img-pr')); ?>
-                </div>
-            <?php  endif;?>
 
-            <div class="single__text">
-                <?php the_content(); ?>
+
+<div class="container-fluid">
+    <div class="row">
+        <section class="store">
+            <a id="go_store" name="go_store" class="go"></a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container">
+                        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                            <?php if ( has_post_thumbnail() ): ?>
+                                <h1 class="single__name"><?php the_title(); ?></h1>
+                                <div class="single__thumb">
+                                    <?php the_post_thumbnail('full', array('class'=>'new-img-pr')); ?>
+                                </div>
+                            <?php  endif;?>
+
+                            <div class="single__text">
+                                <?php the_content(); ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php  endif;?>
+                    </div>
+                </div>
             </div>
-        <?php endwhile; ?>
-        <?php  endif;?>
+        </section>
+    </div>
+
+</div>
+
+<section class="subs">
+    <a id="go_subs" name="go_subs" class="go"></a>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="block_title">Подписка на новости</h1>
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+
+                <form action="">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <input type="email" class="subs__input" placeholder="Ведите Ваш e-mail:">
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 p0">
+                        <input type="button" class="subs__sub" value="Подписаться">
+                    </div>
+                </form>
+
+            </div>
+        </div>
     </div>
 </section>
+
 <section class="social">
     <div class="container-fluid">
         <div class="row">
@@ -113,50 +122,53 @@
     <div class="container-fluid">
         <div class="row">
             <div class="container">
-                <ul class="nav navbar-nav navbar-center navigation__list">
-                    <li><a href="#go_home" class="smoothScroll">Главная</a></li>
-                    <li><a href="#go_stock" class="smoothScroll">Акции</a></li>
-                    <li><a href="#go_store" class="smoothScroll">Товары</a></li>
-                    <li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
-                    <li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
-                    <li><a href="#go_subs" class="smoothScroll">Подписка</a></li>
-                    <li><a href="/cart" >Корзина <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-
-                </ul>
                 <h2 class="number"><?php echo get_theme_mod('phone_textbox'); ?></h2>
             </div>
         </div>
     </div>
 </footer>
 <!-- Modal -->
-<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="send-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Товар добавлен в корзину</h4>
+                <h4 class="modal-title" id="myModalLabel">Оформление заказа</h4>
             </div>
             <div class="modal-body">
-                <!--<p>Укажите ваше имя:</p>
-                <input type="text" name="order-name">
-                <p>Укажите ваш e-mail:</p>
-                <input type="email" name="order-mail">-->
                 <div class="row">
-                    <div class="pull-left">
-                        <a class="gonext" href="#" data-dismiss="modal">
-                            <h4><span class="glyphicon glyphicon-shopping-cart"></span> Продолжить покупки</h4>
-                        </a>
+                    <div class="input-group input-group">
+                        <span class="input-group-addon" id="sizing-addon1">Имя</span>
+                        <input type="text" name="order-name" class="form-control" placeholder="Укажите ваше имя" aria-describedby="sizing-addon1">
                     </div>
-                    <div class="pull-right">
-                        <a class="goorder" href="/cart">
-                            <h4>Оформить заказ <span class="glyphicon glyphicon-share-alt"></span></h4>
-                        </a>
+                    <div class="input-group input-group">
+                        <span class="input-group-addon" id="sizing-addon1">E-mail</span>
+                        <input type="email" name="order-mail" class="form-control" placeholder="Укажите ваш e-mail" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="input-group input-group">
+                        <span class="input-group-addon" id="sizing-addon1">Телефон</span>
+                        <input type="text" name="order-phone" class="form-control" placeholder="Телефон для связи" aria-describedby="sizing-addon1">
+                    </div>
+                    <div class="input-group input-group">
+                        <span class="input-group-addon" id="sizing-addon1">Адрес</span>
+                        <input type="text" name="order-address" class="form-control" placeholder="Адрес доставки" aria-describedby="sizing-addon1">
                     </div>
                 </div>
             </div>
-            <!--<div class="modal-footer">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
-            </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ok-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>Заказ успешно оформлен, скоро с вами свяжутся.</h3>
+                <a href="/" class="btn btn-warning">Вернуться на главную</a>
+            </div>
         </div>
     </div>
 </div>

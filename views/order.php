@@ -21,7 +21,7 @@ Template Name: Order
 <a id="go_home" name="go_home"></a>
 <header class="header">
     <div class="container">
-        <a  href="/" class="gohomelink" ><h4 class="number" >Вернуться на главную</h4></a>
+        <a  href="/" class="gohomelink" ><h4 class="number" ><span class="glyphicon glyphicon-share-alt"></span> Вернуться на главную</h4></a>
         <h1 class="block_title">Магазин экопродуктов Ирины Нельсон</h1>
         <h4><span>Элитный Иван-чай</span> по цене обычного</h4>
         <div class="row">
@@ -178,4 +178,5 @@ Template Name: Order
 </script>
 <?php wp_footer(); ?>
 </body>
+</html>
 
