@@ -34,8 +34,8 @@ function initSliderArtCraft(){
     var distance = (widthWrap - widthContainer) / 2;
     $('.slider-arrow--left').css({'left':distance});
     $('.slider-arrow--right').css({'right':distance});
-    console.log(widthWrap);
-    console.log(widthContainer);
+   // console.log(widthWrap);
+  //  console.log(widthContainer);
 }
 
 $(function () {
@@ -111,22 +111,31 @@ jQuery(document).ready(function($) {
 
     $(document).on('click', '.buy-but', function(){
         id = $(this).attr('data-item');
+        console.log(id);
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=add_to_cart&id=" +id, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+                console.log(data);
+            }
+        });
         return false;
     });
 
     $(document).on('click', '.send-order', function(){
         var name = $('input[name="order-name"]').val();
         var mail = $('input[name="order-mail"]').val();
+        var phone = $('input[name="order-phone"]').val();
+        var address = $('input[name="order-address"]').val();
 
         $.ajax({
             url: ajaxurl, //url, к которому обращаемся
             type: "POST",
-            data: "action=order&id=" + id+'&name='+name+'&mail='+mail, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            data: "action=order&name="+name+"&mail="+mail+"&phone="+phone+"&address="+address, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function(data){
-                console.log(data);
-                // alert('Ваш заказ сделан. В ближайшее время с вами свяжутся. Спасибо.')
-                $('input[name="order-name"]').val('');
-                $('input[name="order-mail"]').val('');
+                //console.log(data);
+                $('#ok-modal').modal('show');
             }
         });
     });
@@ -175,5 +184,23 @@ jQuery(document).ready(function($) {
         });
         return false;
     });
+
+    $(document).on('click', '.delete-from-cart', function(){
+        var block = $(this).parent().parent().parent();
+        var delId = block.attr('data-id');
+
+        $.ajax({
+            url: ajaxurl, //url, к которому обращаемся
+            type: "POST",
+            data: "action=del_from_cart&id=" +delId, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            success: function(data){
+               // console.log(data);
+                block.remove();
+                location.reload();
+            }
+        });
+
+    });
+
 });
 

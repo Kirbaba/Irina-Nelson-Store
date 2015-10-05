@@ -31,10 +31,13 @@
 		      <ul class="nav navbar-nav navbar-center navigation__list">		      
 		        <li><a href="#go_home" class="smoothScroll">Главная</a></li>
 		        <li><a href="#go_stock" class="smoothScroll">Акции</a></li>
+		        <li><a href="#go_store" class="smoothScroll">Товары</a></li>
 		        <li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
 		        <li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
-		        <li><a href="#go_subs" class="smoothScroll">Подписка</a></li>  		       
-		      </ul>
+		        <li><a href="#go_subs" class="smoothScroll">Подписка</a></li>
+				  <li><a href="/cart" >Корзина <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
+			  </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
@@ -109,8 +112,8 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="store">
+				<a id="go_store" name="go_store" class="go"></a>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="container">
@@ -154,7 +157,7 @@
 <!-- 							<p>«Хорошо помогает при гепатите. Лечу гепатит С уже год таблетками. Месяц назад стал дополнительно заваривать сбор. Эффективность лечения увеличилась в разы, что отметил даже врач. Есть все надежды, что избавлюсь от этого вируса раз и навсегда. Очень на это надеюсь».</p>-->
 <!-- 							<p class="author">Константин, 29 лет</p>-->
 <!-- 						</div>-->
- 						<a  href="#" class="show-more more-review" data-page="2">Показать еще статьи</a>
+ 						<a  href="#" class="show-more more-review" data-page="2">Показать еще отзывы</a>
  					</div>
  				</div>
  			</div>
@@ -223,9 +226,12 @@
 					<ul class="nav navbar-nav navbar-center navigation__list">		      
 						<li><a href="#go_home" class="smoothScroll">Главная</a></li>
 						<li><a href="#go_stock" class="smoothScroll">Акции</a></li>
+						<li><a href="#go_store" class="smoothScroll">Товары</a></li>
 						<li><a href="#go_blog" class="smoothScroll">Статьи</a></li>
 						<li><a href="#go_reviews" class="smoothScroll">Отзывы</a></li>
-						<li><a href="#go_subs" class="smoothScroll">Подписка</a></li>  	       
+						<li><a href="#go_subs" class="smoothScroll">Подписка</a></li>
+						<li><a href="/cart" >Корзина <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
 					</ul>
 					<h2 class="number"><?php echo get_theme_mod('phone_textbox'); ?></h2>
  				</div>
@@ -234,21 +240,33 @@
  	</footer>
 	<!-- Modal -->
 	<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-dialog modal-md" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Оформление заказа</h4>
+					<h4 class="modal-title" id="myModalLabel">Товар добавлен в корзину</h4>
 				</div>
 				<div class="modal-body">
-					<p>Укажите ваше имя:</p>
+					<!--<p>Укажите ваше имя:</p>
 					<input type="text" name="order-name">
 					<p>Укажите ваш e-mail:</p>
-					<input type="email" name="order-mail">
+					<input type="email" name="order-mail">-->
+					<div class="row">
+						<div class="pull-left">
+							<a class="gonext" href="#" data-dismiss="modal">
+								<h4><span class="glyphicon glyphicon-shopping-cart"></span> Продолжить покупки</h4>
+							</a>
+						</div>
+						<div class="pull-right">
+							<a class="goorder" href="/cart">
+								<h4>Оформить заказ <span class="glyphicon glyphicon-share-alt"></span></h4>
+							</a>
+						</div>
+					</div>
 				</div>
-				<div class="modal-footer">
+				<!--<div class="modal-footer">
 					<button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>

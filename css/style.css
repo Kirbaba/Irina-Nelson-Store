@@ -74,3 +74,46 @@
 .box-top img {
     width: 100%;
 }
+
+.order-page-thumb img{
+    width: 50px;height: 50px;
+}
+
+.input-group{
+    padding: 10px;
+}
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.gonext h4{
+    padding-left: 20px;
+}
+
+.goorder h4{
+    padding-right: 20px;
+}
+
+.gohomelink{
+    text-decoration: none!important;
+
+}
+.gohomelink h4{
+    color: #FFBF4F!important;
+}

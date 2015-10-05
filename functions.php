@@ -278,7 +278,7 @@ function store_sc(){
 												<p>'.get_the_content().'</p>
 											</div>
 										</div>
-										<h4>Цена: <b>'.get_post_meta($my_query->post->ID, 'price', 1).'</b></h4>
+										<h4>Цена: <b>'.get_post_meta($my_query->post->ID, 'price', 1).' р.</b></h4>
 										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal" data-item="'.$my_query->post->ID.'">Купить</a>
 									</div>
 								</div>';
@@ -326,23 +326,55 @@ function reviews_sc(){
 
 add_shortcode('reviews', 'reviews_sc');
 
+add_action('wp_ajax_nopriv_order', 'set_order');
 add_action('wp_ajax_order', 'set_order');
+add_action('wp_ajax_nopriv_subscription', 'add_subscribe');
 add_action('wp_ajax_subscription', 'add_subscribe');
+add_action('wp_ajax_nopriv_store_more', 'store_sc');
 add_action('wp_ajax_store_more', 'store_sc');
+add_action('wp_ajax_nopriv_review_more', 'reviews_sc');
 add_action('wp_ajax_review_more', 'reviews_sc');
+add_action('wp_ajax_nopriv_add_to_cart', 'addToCart');
+add_action('wp_ajax_add_to_cart', 'addToCart');
+add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
+add_action('wp_ajax_del_from_cart', 'delFromCart');
 
 function set_order(){
 
-    $id = $_POST['id'];
     $name = $_POST['name'];
     $mail = $_POST['mail'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+
     $admin_email = get_option('admin_email');
 
-    $title = get_the_title($id);
-    $subtitle = get_post_meta($id, 'subtitle', 1);
-    $price = get_post_meta($id, 'price', 1);
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+    $items = array_count_values($items);
 
-    mail($admin_email, "Заказ товара с вашего сайта", "С вашего сайта заказали товар:<br>ID товара: $id<br> Название: $title ( $subtitle ) <br>Цена: $price <br> Имя заказчика: $name<br> Email для связи: $mail","Content-type: text/html; charset=UTF-8\r\n");
+
+    $str = "С вашего сайта заказали товар:<br>";
+    $sum = 0;
+    foreach($items as $key => $value){
+        $sum = $sum + $value*get_post_meta($key, 'price', 1);
+
+        $str .= 'ID товара: '.$key.'<br>';
+        $str .= 'Название: '.get_the_title($key).' ('.get_post_meta($key, 'subtitle', 1).') <br>';
+        $str .= 'Кол-во: '. $value .' <br>';
+        $str .= 'Цена: '. $value*get_post_meta($key, 'price', 1) .' р. <br><br>';
+    }
+
+    $str .= 'Итого: '.$sum.' р. <br><br>';
+    $str .= 'Имя заказчика: '.$name.' <br>';
+    $str .= 'Email : '.$mail.' <br>';
+    $str .= 'Телефон для связи : '.$phone.' <br>';
+    $str .= 'Адресс доставки : '.$address.' <br>';
+
+    mail($admin_email, "Заказ товара с вашего сайта",
+        $str,
+        "Content-type: text/html; charset=UTF-8\r\n");
+
+    setcookie("cartCookie", "", time()+86400,'/');
     die();
 }
 
@@ -487,3 +519,49 @@ add_action('customize_register', function($customizer){
     );
 });
 
+function addToCart(){
+    $itemId = $_POST['id'];
+
+    if(isset($_COOKIE['cartCookie'])){
+       $newCookie = $_COOKIE['cartCookie'].','.$itemId;
+    }else{
+        $newCookie = $itemId;
+    }
+
+    setcookie("cartCookie", $newCookie, time()+86400,'/');
+   // prn($newCookie);
+    die();
+}
+
+function delFromCart(){
+    $itemId = $_POST['id'];
+
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+
+
+    foreach($items as $key => $item){
+        if($item == $itemId){
+            unset($items[$key]);
+        }
+    }
+
+   // prn($items);
+    $items = implode(',',$items);
+
+    setcookie("cartCookie", $items, time()+86400,'/');
+    // prn($newCookie);
+    die();
+}
+
+function order_page_sc(){
+
+    $items = explode(',',$_COOKIE['cartCookie']);
+    //получаем количество одинаковых товаров
+    $items = array_count_values($items);
+
+    $parser = new Parser();
+    $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items]);
+}
+
+add_shortcode('order_page', 'order_page_sc');
