@@ -117,7 +117,6 @@ add_shortcode('slider_top', 'print_slider');
 /*------------------------Слайдер (блог)------------------------------*/
 
 function print_slider_blog() {
-    global $wpdb;
     $parser = new Parser();
     $catId = get_category_by_slug( 'blog' );
     $catId = $catId->term_id;
@@ -205,6 +204,7 @@ function my_custom_init_reviews()
 
 function my_extra_fields() {
     add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'store', 'normal', 'high'  );
+    add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'post', 'normal', 'high'  );
     add_meta_box( 'extra_subtitle', 'Подзаголовок', 'extra_fields_title_func', 'store', 'normal', 'high'  );
     add_meta_box( 'extra_years', 'Возраст', 'extra_fields_years_func', 'reviews', 'normal', 'high'  );
 }
@@ -338,6 +338,7 @@ add_action('wp_ajax_nopriv_add_to_cart', 'addToCart');
 add_action('wp_ajax_add_to_cart', 'addToCart');
 add_action('wp_ajax_nopriv_del_from_cart', 'delFromCart');
 add_action('wp_ajax_del_from_cart', 'delFromCart');
+
 
 function set_order(){
 
@@ -558,10 +559,24 @@ function order_page_sc(){
 
     $items = explode(',',$_COOKIE['cartCookie']);
     //получаем количество одинаковых товаров
-    $items = array_count_values($items);
+    if(empty($items[0])){
+        $items[0] = 0;
+    }else{
+        $items = array_count_values($items);
+    }
 
     $parser = new Parser();
     $parser->render(TM_DIR . '/views/ordergrid.php', ['items' => $items]);
 }
 
 add_shortcode('order_page', 'order_page_sc');
+
+function sales_sc(){
+    $parser = new Parser();
+    $catId = get_category_by_slug( 'sales' );
+    $catId = $catId->term_id;
+    $posts = get_posts(['numberposts' => 3, 'category' => $catId, 'order' => 'DESC']);
+    $parser->render(TM_DIR . '/views/sales.php', ['posts'=>$posts]);
+}
+
+add_shortcode('sales', 'sales_sc');

@@ -71,44 +71,51 @@
 					<h1 class="block_title">Народный напиток в каждый дом</h1>
 					<h4>Мы рады сделать Иван-чай доступным для каждой семьи</h4>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="stock__item">
-								<div class="stock__item-1">
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-											<img src="<?php bloginfo('template_directory'); ?>/img/item-1.png" alt="">
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-											<h3>Выдержанный</h3>
-											<p>Иван-чай</p>
-											<h2>300 <i class="fa fa-rub"></i></h2>
-											<div class="old-price">
-												<p>400 <i class="fa fa-rub"></i></p>
-											</div>
-											<a class="buy-but-service smoothScroll" href="#go_store">Купить</a>
-										</div>										
-									</div>
-									<small>Акция продлиться до 12 ноября 2015 г.</small>									
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="stock__item">
-								<div class="stock__item-2">
-									<h2>1 + 1 <span>= 3</span></h2>
-									<img src="<?php bloginfo('template_directory'); ?>/img/item-2.png" alt="">
-									<h4>Получи 3-ю банку в подарок</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-							<div class="stock__item">
-								<div class="stock__item-3">		
-									<img src="<?php bloginfo('template_directory'); ?>/img/item-3.png" alt="">
-									<h3>2 по цене 1</h3>
-								</div>
-							</div>
-						</div>
+<!--						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
+<!--							<a href="">-->
+<!--								<div class="stock__item">-->
+<!--									<img src="--><?php //bloginfo('template_directory'); ?><!--/img/sale.png" alt="">-->
+<!--								</div>-->
+<!--							</a>-->
+
+
+<!--								<div class="stock__item-1">-->
+<!--									<div class="row">-->
+<!--										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">-->
+<!--											<img src="--><?php //bloginfo('template_directory'); ?><!--/img/item-1.png" alt="">-->
+<!--										</div>-->
+<!--										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">-->
+<!--											<h3>Выдержанный</h3>-->
+<!--											<p>Иван-чай</p>-->
+<!--											<h2>300 <i class="fa fa-rub"></i></h2>-->
+<!--											<div class="old-price">-->
+<!--												<p>400 <i class="fa fa-rub"></i></p>-->
+<!--											</div>-->
+<!--											<a class="buy-but-service smoothScroll" href="#go_store">Купить</a>-->
+<!--										</div>										-->
+<!--									</div>-->
+<!--									<small>Акция продлиться до 12 ноября 2015 г.</small>									-->
+<!--								</div>-->
+
+<!--						</div>-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
+<!--							<div class="stock__item">-->
+<!--								<div class="stock__item-2">-->
+<!--									<h2>1 + 1 <span>= 3</span></h2>-->
+<!--									<img src="--><?php //bloginfo('template_directory'); ?><!--/img/item-2.png" alt="">-->
+<!--									<h4>Получи 3-ю банку в подарок</h4>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
+<!--							<div class="stock__item">-->
+<!--								<div class="stock__item-3">		-->
+<!--									<img src="--><?php //bloginfo('template_directory'); ?><!--/img/item-3.png" alt="">-->
+<!--									<h3>2 по цене 1</h3>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+						<?php echo do_shortcode('[sales]') ?>
 					</div>
 				</div>
 			</section>

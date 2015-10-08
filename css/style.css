@@ -159,3 +159,11 @@
     background-color: #d66847;
 }
 
+.empty-cart{
+    text-align: center;
+}
+
+.empty-cart a{
+    text-decoration: none;
+}
+
