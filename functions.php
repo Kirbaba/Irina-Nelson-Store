@@ -580,3 +580,36 @@ function sales_sc(){
 }
 
 add_shortcode('sales', 'sales_sc');
+
+function generateNumber($length = 8){
+    $chars = '0123456789';
+    $numChars = strlen($chars);
+    $string = '';
+    for ($i = 0; $i < $length; $i++) {
+        $string .= substr($chars, rand(1, $numChars) - 1, 1);
+    }
+    return $string;
+}
+
+/*------------------------Заказы------------------------------*/
+
+function register_orders_page(){
+    add_menu_page(
+        'Заказы', 'Заказы', 'manage_options', 'orders', 'admin_orders_page', '', 190
+    );
+}
+
+function admin_orders_page(){
+    global $wpdb;
+    $parser = new Parser();
+
+    if(isset($_GET['del'])){
+        $wpdb->delete( 'orders', ['id'=>$_GET['del']] );
+    }
+
+    $orders = $wpdb->get_results("SELECT * FROM tea", ARRAY_A);
+
+    $parser->render(TM_DIR . '/views/orders_admin_page.php', ['orders' => $orders]);
+}
+
+add_action( 'admin_menu', 'register_orders_page' );

@@ -167,3 +167,15 @@
     text-decoration: none;
 }
 
+.orderWrap {
+    height: 200px;
+    width: 100%;
+    float: left;
+    font-size: 15px;
+}
+
+.orderPay {
+    width: 300px;
+    margin: 75px auto;
+}
+
