@@ -56,6 +56,7 @@
 
                             <?php if(in_category('sales')){ ?>
                             <div class="store__item" >
+                                <h4>Цена: <b><?php echo get_post_meta(get_the_ID(), 'price', 1) ?> р.</b></h4>
                                 <a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal" data-item="<?= get_the_ID(); ?>">Купить</a>
                             </div>
                             <?php  } ?>
