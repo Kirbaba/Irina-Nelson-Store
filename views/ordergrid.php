@@ -1,6 +1,7 @@
 <div class="col-lg-12">
     <div class="row">
         <?php/* prn($_COOKIE['cartCookie'])*/?>
+        <?php  if(!isset($items[0])){ ?>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="row">
@@ -31,7 +32,8 @@
                                 </div>
                                 <div class="col-lg-6 order-page-name">
                                     <?php echo get_the_title($key); ?> <br>
-                                    (<?php echo get_post_meta($key, 'subtitle', 1) ?>)
+
+                                   <?php if(get_post_meta($key, 'subtitle', 1) != '' ) { ?> (<?php echo get_post_meta($key, 'subtitle', 1) ?>) <?php } ?>
                                 </div>
                                 <div class="col-lg-1 order-page-count">
                                     <?php echo $value ?>
@@ -72,5 +74,9 @@
                 </div>
             </div>
         </div>
+        <?php } else {?>
+            <h2 class="empty-cart">Корзина пуста</h2>
+            <h3 class="empty-cart"><a href="/">Вернуться на главную</a></h3>
+        <?php }?>
     </div>
 </div>

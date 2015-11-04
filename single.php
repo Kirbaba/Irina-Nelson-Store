@@ -53,6 +53,12 @@
                             <div class="single__text">
                                 <?php the_content(); ?>
                             </div>
+
+                            <?php if(in_category('sales')){ ?>
+                            <div class="store__item" >
+                                <a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal" data-item="<?= get_the_ID(); ?>">Купить</a>
+                            </div>
+                            <?php  } ?>
                         <?php endwhile; ?>
                         <?php  endif;?>
                     </div>
@@ -127,6 +133,38 @@
         </div>
     </div>
 </footer>
+<!-- Modal -->
+<div class="modal fade" id="buy-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Товар добавлен в корзину</h4>
+            </div>
+            <div class="modal-body">
+                <!--<p>Укажите ваше имя:</p>
+                <input type="text" name="order-name">
+                <p>Укажите ваш e-mail:</p>
+                <input type="email" name="order-mail">-->
+                <div class="row">
+                    <div class="pull-left">
+                        <a class="gonext" href="#" data-dismiss="modal">
+                            <h4><span class="glyphicon glyphicon-shopping-cart"></span> Продолжить покупки</h4>
+                        </a>
+                    </div>
+                    <div class="pull-right">
+                        <a class="goorder" href="/cart">
+                            <h4>Оформить заказ <span class="glyphicon glyphicon-share-alt"></span></h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="modal-footer">
+                <button type="button" class="btn btn-success send-order" data-dismiss="modal">Отправить</button>
+            </div>-->
+        </div>
+    </div>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="send-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-md" role="document">
