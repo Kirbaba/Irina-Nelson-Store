@@ -1,6 +1,7 @@
 <table class="table table-responsive">
     <tr>
         <th>Номер заказа</th>
+        <th>Контактная информация</th>
         <th>E-mail</th>
         <th>Телефон</th>
         <th>Сумма</th>
@@ -14,6 +15,7 @@
     <?php $books = explode(',', $order['tea']); ?>
     <tr>
         <td><?=$order['order_key']?></td>
+        <td><?=$order['name']?> / <?=$order['address']?></td>
         <td><?=$order['email']?></td>
         <td><?=$order['phone']?></td>
         <td><?=$order['sum']?></td>

@@ -81,9 +81,9 @@
 
                                 if($count < 6){
                                     $deliveryCost = 250;
-                                }else if($count > 6 && $count < 9){
+                                }else if($count >= 6 && $count < 9){
                                     $deliveryCost = 400;
-                                }else if($count > 9){
+                                }else if($count >= 9){
                                     $deliveryCost = 600;
                                 }
 

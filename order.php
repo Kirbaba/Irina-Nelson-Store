@@ -89,7 +89,9 @@ $wpdb->insert( 'tea', [
     'email'=>$_POST['order-mail'],
     'phone'=>$_POST['order-phone'],
     'delivery' =>$_POST['deliveryType'],
-    'payment' => $_POST['paymentType']
+    'payment' => $_POST['paymentType'],
+    'name' => $_POST['order-name'],
+    'address' => $_POST['order-address']
 ] );
 
 $admin_email = get_option('admin_email');
