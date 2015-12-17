@@ -108,6 +108,8 @@ jQuery(document).ready(function($) {
     var id;
     var glide = $('.slider-top').glide().data('api_glide');
 
+    $('#pochta').tooltip();
+
     $(document).on('click', '.buy-but', function(){
         id = $(this).attr('data-item');
         console.log(id);
@@ -147,8 +149,8 @@ jQuery(document).ready(function($) {
             type: "POST",
             data: "action=subscription&mail=" +mail, //данные, которые передаем. Обязательно для action указываем имя нашего хука
             success: function(data){
-                alert('Вы подписаны на новости!');
-               // console.log(data);
+                alert('Вы подписаны на рассылку!');
+                $('.subs__input').val('');
             }
         });
     });
@@ -199,6 +201,43 @@ jQuery(document).ready(function($) {
             }
         });
 
+    });
+
+    $(document).on('change','input[name="delivery"]', function(){
+        var productPrice = $('input[name="sum"]').val();
+        var type = $(this).val();
+
+        if(type == 'pochta'){
+            var typePrice = $(this).attr('data-price');
+            $('.totalPrice').text(parseInt(typePrice)+parseInt(productPrice) + ' р. ');
+        }else if(type == 'curier'){
+            $('.totalPrice').html(productPrice + ' р. <a id="managerDelivery" data-toggle="tooltip" title="необходимо уточнить у менеджера детали">(*)</a>');
+            $('#managerDelivery').tooltip();
+
+        }else if(type == 'samovivoz'){
+            $('.totalPrice').html(productPrice+' р. <a id="managerDelivery" data-toggle="tooltip" title="необходимо уточнить у менеджера детали">(*)</a>');
+            $('#managerDelivery').tooltip();
+        }
+
+        $('input[name="deliveryType"]').val(type);
+    });
+
+    $(document).on('change','input[name="payment"]', function(){
+        var productPrice = $('input[name="sum"]').val();
+        var type = $(this).val();
+        var typePrice = $('input[name="delivery"]:checked').attr('data-price');
+
+        if(type == 'robokassa'){
+            $('.totalPrice').text(parseInt(typePrice)+parseInt(productPrice)+' р.');
+        }else if(type == 'cash'){
+            $('.totalPrice').html(parseInt(typePrice)+parseInt(productPrice) + ' р. <a id="managerPayment" data-toggle="tooltip" title="необходимо уточнить у менеджера детали">(*)</a>');
+            $('#managerPayment').tooltip();
+
+        }else if(type == 'manager'){
+            $('.totalPrice').html(parseInt(typePrice)+parseInt(productPrice)+' р.');
+            $('#managerPayment').tooltip();
+
+        }
     });
 
 });

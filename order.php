@@ -8,48 +8,56 @@ get_header();
     <div class="orderPay">
 
 <?php
-
-/* Источник: http://n-wp.ru/8295 */
-$mrh_login = "storeadmin";
-$mrh_pass1 = "123456qwerty";
+//prn($_POST);
 
 $inv_id = generateNumber();
+$out_summ = $_POST['sum']+$_POST['deliveryCost'];
 
-$inv_desc = "Оплата с сайта Магазин экопродуктов Ирины Нельсон, E-mail: ".$_POST['order-mail'].", Номер заказа: ".$inv_id  ;
+if($_POST['deliveryType'] == 'pochta' && $_POST['paymentType'] == 'robokassa') {
+    /* Источник: http://n-wp.ru/8295 */
+    $mrh_login = "irinanelson_tea";
+    $mrh_pass1 = "123edcxzaqws";
 
-$out_summ = $_POST['sum'];
+    $inv_desc = "Оплата с сайта Магазин экопродуктов Ирины Нельсон, E-mail: " . $_POST['order-mail'] . ", Номер заказа: " . $inv_id;
 
-$is_test = 1;
+    $is_test = 0;
 
-$shp_item = 1;
+    $shp_item = 1;
 
-$in_curr = "";
+    $in_curr = "";
 
-$culture = "ru";
+    $culture = "ru";
 
-$encoding = "utf-8";
+    $encoding = "utf-8";
 
-$crc  = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
+    $crc = md5("$mrh_login:$out_summ:$inv_id:$mrh_pass1:Shp_item=$shp_item");
 
-?>
-        <span class="orderId">Номер заказа: <?=$inv_id?></span>
-        <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
-            <input type=hidden name=MrchLogin value='<?=$mrh_login?>'>
-            <input type=hidden name=OutSum value='<?=$out_summ?>'>
-            <input type=hidden name=IsTest value='<?=$is_test?>'>
-            <input type=hidden name=InvId value='<?=$inv_id?>'>
-            <input type=hidden name=Desc value='<?=$inv_desc?>'>
-            <input type=hidden name=SignatureValue value='<?=$crc?>'>
-            <input type=hidden name=Shp_item value='<?=$shp_item?>'>
-            <input type=hidden name=IncCurrLabel value='<?=$in_curr?>'>
-            <input type=hidden name=Culture value='<?=$culture?>'>
-            <label class="sbmLabel" for="sbm">К оплате: <?=$out_summ?> руб.</label>
-            <input id="sbm" type=submit class="btn btn-primary" value='Оплатить'>
-        </form>
+    ?>
+    <span class="orderId">Номер заказа: <?= $inv_id ?></span>
+    <form action='https://merchant.roboxchange.com/Index.aspx' method=POST>
+        <input type=hidden name=MrchLogin value='<?= $mrh_login ?>'>
+        <input type=hidden name=OutSum value='<?= $out_summ ?>'>
+        <input type=hidden name=IsTest value='<?= $is_test ?>'>
+        <input type=hidden name=InvId value='<?= $inv_id ?>'>
+        <input type=hidden name=Desc value='<?= $inv_desc ?>'>
+        <input type=hidden name=SignatureValue value='<?= $crc ?>'>
+        <input type=hidden name=Shp_item value='<?= $shp_item ?>'>
+        <input type=hidden name=IncCurrLabel value='<?= $in_curr ?>'>
+        <input type=hidden name=Culture value='<?= $culture ?>'>
+        <label class="sbmLabel" for="sbm">К оплате: <?= $out_summ ?> руб.</label>
+        <input id="sbm" type=submit class="btn btn-primary" value='Оплатить'>
+    </form>
     </div>
-</div>
+    </div>
+    <?php
+}else{
+  ?>
+    <span class="orderId">Номер заказа: <?= $inv_id ?></span>
+    <p>Спасибо за заказ! С Вами скоро свяжется менеджер для уточнения заказа.</p>
+     </div>
+    </div>
 <?php
-
+}
 $items = explode(',',$_COOKIE['cartCookie']);
 
 //получаем количество одинаковых товаров
@@ -79,10 +87,13 @@ $wpdb->insert( 'tea', [
     'sum'=>$out_summ,
     'tea'=>$books,
     'email'=>$_POST['order-mail'],
-    'phone'=>$_POST['order-phone']
+    'phone'=>$_POST['order-phone'],
+    'delivery' =>$_POST['deliveryType'],
+    'payment' => $_POST['paymentType']
 ] );
 
 $admin_email = get_option('admin_email');
 $text = "Поступил новый заказ, номер заказа: ".$inv_id;
 mail($admin_email, "Заказ товара с вашего сайта",$text,"Content-type: text/html; charset=UTF-8\r\n");
+mail($_POST['order-mail'], "Вы осуществили заказ",'Номер вашего заказа :'.$inv_id,"Content-type: text/html; charset=UTF-8\r\n");
 get_footer();

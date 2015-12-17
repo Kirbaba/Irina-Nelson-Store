@@ -53,16 +53,63 @@
             </div>
             <div class="panel-footer">
                 <div class="row">
+                    <div class="col-lg-12 pull-right">
+                        <div class="col-lg-6 paymentRow">
+                            <h4>Выберите тип оплаты:</h4>
+                            <p>
+                                <label><input type="radio" name="payment" value="robokassa" checked> Робокасса</label>
+                            </p>
+                            <p>
+                                <label><input type="radio" name="payment" value="cash"> Наличными (при самовывозе)</label>
+                            </p>
+                            <p>
+                                <label><input type="radio" name="payment" value="manager"> Уточнить заказ у менеджера (для доставки курьером и при возникновении любых вопросов)</label>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 deliveryRow">
+                            <h4>Выберите тип доставки:</h4>
+                            <p>
+                                <label><input type="radio" name="delivery" value="curier" data-price="0"> Курьером (до 3-х рабочих дней)<br>
+                                    <a href="http://clients.cityexpress.ru/Customers/Calc.aspx">(калькулятор)</a></label>
+                            </p>
+                            <p>
+                                <?php
+                                $count = 0;
+                                foreach($items as $key => $value){
+                                    $count = $count + $value;
+                                }
 
+                                if($count < 6){
+                                    $deliveryCost = 250;
+                                }else if($count > 6 && $count < 9){
+                                    $deliveryCost = 400;
+                                }else if($count > 9){
+                                    $deliveryCost = 600;
+                                }
+
+                                ?>
+                                <label><input type="radio" name="delivery" value="pochta" checked data-price="<?= $deliveryCost; ?>"> Почта России (до 3-х рабочих дней)
+                                    <a id="pochta" data-toggle="tooltip" title="1-5 ед. - 250р.
+6-8 ед. - 400р.
+от 9 ед. - 600р.">(?)</a><span>
+                                 <?= $deliveryCost; ?>  р.
+                                </span></label>
+
+                            </p>
+                            <p>
+                                <label><input type="radio" name="delivery" value="samovivoz" data-price="0"> Самовывоз м. Павлецкая </label>
+                            </p>
+                        </div>
+                    </div>
                     <div class="col-lg-2 pull-right">
-                        <p class="order-page-title">Итого:
+                        <p class="order-page-title">Итого: <span class="totalPrice">
                             <?php
                             $sum = 0;
                             foreach($items as $key => $value){
                                 $sum = $sum + $value*get_post_meta($key, 'price', 1);
                             }
-                            echo $sum;
-                            ?> р.</p>
+                            echo $sum + $deliveryCost;
+                            ?> р. </span> </p>
                         <p><button class="btn btn-warning" data-toggle="modal" data-target="#send-modal">Оформить заказ</button></p>
                     </div>
                     <div class="col-lg-2 pull-left">
@@ -110,6 +157,9 @@
                     </div>
                 </div>
                 <input type="hidden" name="sum" value="<?=$sum?>">
+                <input type="hidden" name="deliveryCost" value="<?php if(isset($deliveryCost)){echo $deliveryCost;}else{echo 0;}?>">
+                <input type="hidden" name="deliveryType" value="pochta">
+                <input type="hidden" name="paymentType" value="robokassa">
                 <div class="modal-footer">
                     <button type="submit" onclick="submit();" class="btn btn-success" data-dismiss="modal">Отправить</button>
                 </div>

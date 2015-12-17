@@ -5,6 +5,8 @@
         <th>Телефон</th>
         <th>Сумма</th>
         <th>Товары</th>
+        <th>Доставка</th>
+        <th>Тип оплаты</th>
         <th>Статус</th>
         <th>Действия</th>
     </tr>
@@ -19,6 +21,32 @@
             <?php foreach($books as $b){
                 echo get_the_title($b)."<br>";
             }
+            ?>
+        </td>
+        <td>
+            <?php
+
+            if($order['delivery'] == 'curier'){
+                echo 'Курьером';
+            }elseif($order['delivery'] == 'pochta'){
+                echo 'Почта России';
+            }elseif($order['delivery'] == 'samovivoz'){
+                echo 'Самовывоз м. Павлецкая';
+            }
+
+            ?>
+        </td>
+        <td>
+            <?php
+
+            if($order['payment'] == 'robokassa'){
+                echo 'Робокасса';
+            }elseif($order['payment'] == 'cash'){
+                echo 'Наличные';
+            }elseif($order['payment'] == 'manager'){
+                echo 'Уточнить с менеджером';
+            }
+
             ?>
         </td>
         <td><?php if($order['pay'] == 1){

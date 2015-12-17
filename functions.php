@@ -604,7 +604,7 @@ function admin_orders_page(){
     $parser = new Parser();
 
     if(isset($_GET['del'])){
-        $wpdb->delete( 'orders', ['id'=>$_GET['del']] );
+        $wpdb->delete( 'tea', ['id'=>$_GET['del']] );
     }
 
     $orders = $wpdb->get_results("SELECT * FROM tea", ARRAY_A);
