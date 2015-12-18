@@ -12,8 +12,9 @@ get_header();
 
 $inv_id = generateNumber();
 $out_summ = $_POST['sum']+$_POST['deliveryCost'];
-
-if($_POST['deliveryType'] == 'pochta' && $_POST['paymentType'] == 'robokassa') {
+prn($_POST['deliveryType']);
+prn($_POST['paymentType']);
+if($_POST['paymentType'] == 'robokassa') {
     /* Источник: http://n-wp.ru/8295 */
     $mrh_login = "irinanelson_tea";
     $mrh_pass1 = "123edcxzaqws";
@@ -95,7 +96,14 @@ $wpdb->insert( 'tea', [
 ] );
 
 $admin_email = get_option('admin_email');
-$text = "Поступил новый заказ, номер заказа: ".$inv_id;
-mail($admin_email, "Заказ товара с вашего сайта",$text,"Content-type: text/html; charset=UTF-8\r\n");
-mail($_POST['order-mail'], "Вы осуществили заказ",'Номер вашего заказа :'.$inv_id,"Content-type: text/html; charset=UTF-8\r\n");
+$text  = 'Благодарим Вас за заказ на сайте http://store.irene-nelson.com/ <br>';
+$text .= 'Ваш заказ был оформлен с такими данными: <br><br>';
+$text .= 'ЗАКАЗ №: '.$inv_id.'<br><br>';
+$text .= 'СТАТУС ЗАКАЗА: ПОДТВЕРЖДЕНИЕ ЗАКАЗА <br><br>';
+$text .= 'Вы можете оплатить ваш заказ через Робокассу (введите номер вашего заказа на сайте Робокассы или оплатите на нашем сайте: "<a href="http://store.irene-nelson.com/cart/">Корзина</a>" - "Оформить заказ" - "Оплатить"), если он не нуждается в дополнительном обсуждении с менеджером. Дождитесь, пожалуйста, звонка менеджера, если детали вашего заказа необходимо обсудьть.';
+
+
+
+mail($_POST['order-mail'], "Магазин Ирины Нельсон",$text,"Content-type: text/html; charset=UTF-8\r\n");
+mail($admin_email, "Магазин Ирины Нельсон - новый заказ",'Номер заказа :'.$inv_id,"Content-type: text/html; charset=UTF-8\r\n");
 get_footer();

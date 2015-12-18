@@ -238,6 +238,8 @@ jQuery(document).ready(function($) {
             $('#managerPayment').tooltip();
 
         }
+
+        $('input[name="paymentType"]').val(type);
     });
 
 });
