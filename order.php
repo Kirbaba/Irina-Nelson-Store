@@ -12,8 +12,7 @@ get_header();
 
 $inv_id = generateNumber();
 $out_summ = $_POST['sum']+$_POST['deliveryCost'];
-prn($_POST['deliveryType']);
-prn($_POST['paymentType']);
+
 if($_POST['paymentType'] == 'robokassa') {
     /* Источник: http://n-wp.ru/8295 */
     $mrh_login = "irinanelson_tea";
@@ -92,7 +91,7 @@ $wpdb->insert( 'tea', [
     'delivery' =>$_POST['deliveryType'],
     'payment' => $_POST['paymentType'],
     'name' => $_POST['order-name'],
-    'address' => $_POST['order-address']
+    'address' => $_POST['order-address'].', дом: '.$_POST['order-house'].', кв.: '.$_POST['order-apartment']
 ] );
 
 $admin_email = get_option('admin_email');

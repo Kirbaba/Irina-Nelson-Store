@@ -154,6 +154,14 @@
                             <span class="input-group-addon" id="sizing-addon1">Адрес</span>
                             <input type="text" name="order-address" class="form-control" placeholder="Адрес доставки" aria-describedby="sizing-addon1">
                         </div>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Дом</span>
+                            <input type="text" name="order-house" class="form-control" placeholder="Дом" aria-describedby="sizing-addon1">
+                        </div>
+                        <div class="input-group input-group">
+                            <span class="input-group-addon" id="sizing-addon1">Квартира</span>
+                            <input type="text" name="order-apartment" class="form-control" placeholder="Номер квартиры" aria-describedby="sizing-addon1">
+                        </div>
                     </div>
                 </div>
                 <input type="hidden" name="sum" value="<?=$sum?>">
