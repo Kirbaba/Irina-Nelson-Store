@@ -386,7 +386,13 @@ function add_subscribe(){
     $mail = $_POST['mail'];
     $admin_email = get_option('admin_email');
 
-    mail($admin_email, "Подписка на сайт", "На ваш сайт подписался данный email: $mail","Content-type: text/html; charset=UTF-8\r\n");
+    $text = 'Вы только что подписались на рассылку от магазина экопродуктов Ирины Нельсон. Спасибо, что вы с нами! <br>';
+    $text .= 'Что теперь? Мы будем отправлять письма с подборкой самых популярных статей на нашем ресурсе раз в месяц, а также сообщать об акциях и специальных предложениях.<br>';
+    $text .= 'Помимо рассылки мы публикуем интересные посты в соцсетях. Присоединяйтесь к нам, чтобы быть в курсе всего и сразу: <a href="http://vk.com/nelsontea">ВКонтакте</a><br>';
+    $text .= 'Появились вопросы? Обращайтесь: +7 925 449 12 89. '.$admin_email;
+
+    mail($mail, "Магазин Ирины Нельсон", $text,"Content-type: text/html; charset=UTF-8\r\n");
+    mail($admin_email, "Магазин Ирины Нельсон - подписка на сайт ", "На ваш сайт подписался данный email: $mail","Content-type: text/html; charset=UTF-8\r\n");
     die();
 }
 
@@ -583,3 +589,36 @@ function sales_sc(){
 }
 
 add_shortcode('sales', 'sales_sc');
+
+function generateNumber($length = 8){
+    $chars = '0123456789';
+    $numChars = strlen($chars);
+    $string = '';
+    for ($i = 0; $i < $length; $i++) {
+        $string .= substr($chars, rand(1, $numChars) - 1, 1);
+    }
+    return $string;
+}
+
+/*------------------------Заказы------------------------------*/
+
+function register_orders_page(){
+    add_menu_page(
+        'Заказы', 'Заказы', 'manage_options', 'orders', 'admin_orders_page', '', 190
+    );
+}
+
+function admin_orders_page(){
+    global $wpdb;
+    $parser = new Parser();
+
+    if(isset($_GET['del'])){
+        $wpdb->delete( 'tea', ['id'=>$_GET['del']] );
+    }
+
+    $orders = $wpdb->get_results("SELECT * FROM tea", ARRAY_A);
+
+    $parser->render(TM_DIR . '/views/orders_admin_page.php', ['orders' => $orders]);
+}
+
+add_action( 'admin_menu', 'register_orders_page' );

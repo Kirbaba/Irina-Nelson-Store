@@ -167,3 +167,28 @@
     text-decoration: none;
 }
 
+.orderWrap {
+    height: 200px;
+    width: 100%;
+    float: left;
+    font-size: 15px;
+}
+
+.orderPay {
+    width: 300px;
+    margin: 75px auto;
+}
+
+.tooltip-inner {
+    white-space:pre;
+    max-width: none;
+}
+
+.deliveryRow{
+    margin: 0;
+}
+
+.paymentRow{
+    margin: 0;
+}
+
