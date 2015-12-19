@@ -192,3 +192,11 @@
     margin: 0;
 }
 
+a.stock__item-1, a.stock__item-2, a.stock__item-3{
+    text-decoration: none;
+}
+
+.post{
+    padding: 0;
+}
+
