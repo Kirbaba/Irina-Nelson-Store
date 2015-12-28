@@ -16,7 +16,12 @@
 <div class="slider-top">
     <ul class="slides-top">
         <?php foreach($slids as $s) { ?>
-            <li class="slide-top"><div class="box-top" ><img src="<?= $s['link'] ?>" alt=""></div></li>
+            <li class="slide-top">
+                <div class="box-top" >
+                    <img src="<?= $s['link'] ?>" alt="">
+                    <?= $s['text'] ?>
+                </div>
+            </li>
         <?php } ?>
     </ul>
 </div>

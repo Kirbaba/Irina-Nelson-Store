@@ -622,3 +622,42 @@ function admin_orders_page(){
 }
 
 add_action( 'admin_menu', 'register_orders_page' );
+
+/*-------------------------------------с этим товаром также покупают------------------------------------*/
+function buymore_sc(){
+    $html = '';
+    $type = 'store';
+    $args = array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'posts_per_page' => 4);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    //prn($my_query);
+
+    if( $my_query->have_posts() ) {
+        while ($my_query->have_posts()) : $my_query->the_post();
+
+            // prn($my_query->post->ID);
+
+            $html .= '<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 post">
+									<div class="store__item">
+										<h5>'.get_the_title().'</h5>
+										<div class="store__thumb" style="height: 240px">
+											'.get_the_post_thumbnail($my_query->post->ID,'full').'
+										</div>
+										<h4>Цена: <b>'.get_post_meta($my_query->post->ID, 'price', 1).' р.</b></h4>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal" data-item="'.$my_query->post->ID.'">Купить</a>
+									</div>
+								</div>';
+        endwhile;
+    }
+    wp_reset_query();  // Restore global post data stomped by the_post().
+
+    echo $html;
+   // wp_die();
+}
+
+add_shortcode('buymore', 'buymore_sc');
