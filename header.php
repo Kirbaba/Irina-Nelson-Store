@@ -7,6 +7,7 @@
     <link rel="icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/wp-content/uploads/2015/03/657068.ico" type="image/x-icon" />
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE"></script>
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=dY3bJkFPAswBpu1RLp528BSzopjomo/co9xdiZUCrFJQySl3qdsfJl6R0*x4HjWsIM8cBwrcOHHWEjnpgmbcBW8BthNX*DL2UkeSHaCPs/nvYFaEGKlsyVGyEaePMXMbFExw1/ac7IAuRxFFzd38CcFCMeMWRMHJh/tPWY4afDs-';</script>
     <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
     <?php wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>

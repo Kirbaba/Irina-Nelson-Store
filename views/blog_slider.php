@@ -12,11 +12,10 @@
                             <div class="slide-image"><?= get_the_post_thumbnail( $p->ID, 'full', [] ); ?></div>
                             <div class="slide-text">
                                 <h4><a class="blogSliderLink" href="<?= $p->guid ?>"><?= $p->post_title ?></a></h4>
-                                <p><?= $p->post_content ?></p></div>
+                                <p><?php content(50); ?></p>
+                            </div>
                         </div>
                         <?php } ?>
-
-
                     </div>
                 </div>
             </div>

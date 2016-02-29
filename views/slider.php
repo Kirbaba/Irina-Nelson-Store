@@ -19,7 +19,7 @@
             <li class="slide-top">
                 <div class="box-top" >
                     <img src="<?= $s['link'] ?>" alt="">
-                    <?= $s['text'] ?>
+                    <?php /* $s['text'] */?>
                 </div>
             </li>
         <?php } ?>

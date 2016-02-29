@@ -48,6 +48,9 @@
                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p0">
                     <p class="align-right">Все права защищены. 2015</p>
                 </div>
+                <div class="col-xs-12">
+                	<p class="align-left" style="line-height: 1em;margin-bottom: 0px;">540517236499, ИП Тюрин Вячеслав Владимирович, 115114, г. Москва, ул. Дербенёвская, д. 20, стр. 30</p>
+                </div>
             </div>
         </div>
     </div>
