@@ -207,8 +207,10 @@ function my_custom_init_reviews()
 
 function my_extra_fields() {
     add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'store', 'normal', 'high'  );
+    add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'funshop', 'normal', 'high'  );
     add_meta_box( 'extra_price', 'Цена', 'extra_fields_box_func', 'post', 'normal', 'high'  );
     add_meta_box( 'extra_subtitle', 'Подзаголовок', 'extra_fields_title_func', 'store', 'normal', 'high'  );
+    add_meta_box( 'extra_subtitle', 'Подзаголовок', 'extra_fields_title_func', 'funshop', 'normal', 'high'  );
     add_meta_box( 'extra_years', 'Возраст', 'extra_fields_years_func', 'reviews', 'normal', 'high'  );
 }
 add_action('add_meta_boxes', 'my_extra_fields', 1);
@@ -674,3 +676,96 @@ function content($num) {
 	$content = implode(" ",$content)."..."; 
 	echo $content; 
 }
+
+/*---------------------------------------- fun shop -------------------------------------------------------*/
+
+add_action('init', 'my_custom_init_funshop');
+function my_custom_init_funshop()
+{
+    $labels = array(
+        'name' => 'Сувенирная продукция', // Основное название типа записи
+        'singular_name' => 'Товар', // отдельное название записи типа Book
+        'add_new' => 'Добавить товар',
+        'add_new_item' => 'Добавить новый товар',
+        'edit_item' => 'Редактировать товар',
+        'new_item' => 'Новый товар',
+        'view_item' => 'Посмотреть товар',
+        'search_items' => 'Найти товар',
+        'not_found' =>  'Товаров не найдено',
+        'not_found_in_trash' => 'В корзине товаров не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Сувенирная продукция'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+    );
+    register_post_type('funshop',$args);
+
+
+}
+
+function funshop_sc(){
+    if($_POST['num']){
+        $page = $_POST['num'];
+    }else{
+        $page = 1;
+    }
+
+    $html = '';
+    $type = 'funshop';
+    $args = array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'posts_per_page' => 6,
+        'paged'=> $page);
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    //prn($my_query);
+
+    if( $my_query->have_posts() ) {
+        while ($my_query->have_posts()) : $my_query->the_post();
+
+            // prn($my_query->post->ID);
+
+            $html .= '<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 post">
+									<div class="store__item">
+										<h3>'.get_the_title().'</h3>
+										<h5>'. get_post_meta($my_query->post->ID, 'subtitle', 1).'</h5>
+										<div class="store__thumb">
+											'.get_the_post_thumbnail($my_query->post->ID,'full').'
+											<div class="store__thumb--text">
+												<p>'.get_the_content().'</p>
+											</div>
+										</div>
+										<h4>Цена: <b>'.get_post_meta($my_query->post->ID, 'price', 1).' р.</b></h4>
+										<a href="#" class="buy-but" data-toggle="modal" data-target="#buy-modal" data-item="'.$my_query->post->ID.'">Купить</a>
+									</div>
+								</div>';
+        endwhile;
+    }
+    wp_reset_query();  // Restore global post data stomped by the_post().
+
+    echo $html;
+
+    if($_POST['num']){
+        die();
+    }
+
+}
+
+add_shortcode('funshop', 'funshop_sc');
+/*------------------------------------ end fun shop -------------------------------------------------------*/
